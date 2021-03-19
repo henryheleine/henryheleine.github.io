@@ -1,3 +1,3 @@
 # henryheleine.github.io
 
-More details coming soon...
+Github Public Page
