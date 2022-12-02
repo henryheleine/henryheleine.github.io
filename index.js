@@ -16,6 +16,10 @@ app.get("/enterprisebuild/v4.7", function(req, res) {
     })
 })
 
+app.get("/health", function(req,res) {
+    res.writeHead(200, {"Content-Type":"text/html"})
+})
+
 app.get("/mobile/2.0/channel/ushome", function(req, res) {
     fs.readFile("public/ushome.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
