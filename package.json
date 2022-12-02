@@ -1,0 +1,15 @@
+{
+  "name": "henryheleine.github.io",
+  "version": "1.0.0",
+  "description": "render app",
+  "main": "index.js",
+  "dependencies": {
+    "express": "4.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryheleine/henryheleine.github.io.git"
+  },
+  "author": "henry heleine",
+  "license": "MIT"
+}
