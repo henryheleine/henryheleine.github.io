@@ -18,6 +18,7 @@ app.get("/enterprisebuild/v4.7", function(req, res) {
 
 app.get("/health", function(req,res) {
     res.writeHead(200, {"Content-Type":"text/html"})
+    res.end()
 })
 
 app.get("/mobile/2.0/channel/ushome", function(req, res) {
