@@ -22,7 +22,7 @@ app.get("/health", function(req,res) {
 })
 
 app.get("/mobile/2.0/channel/ushome", function(req, res) {
-    fs.readFile("public/ushome.json", function(error, data) {
+    fs.readFile("ushome.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
         res.end(data)
     })
