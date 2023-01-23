@@ -25,4 +25,11 @@ app.get("/mobile/2.0/channel/ushome", function(req, res) {
     })
 })
 
+app.get("/mobile/2.0/article/11471317", function(req, res) {
+    fs.readFile("11471317.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.listen(port)
