@@ -95,7 +95,7 @@
 		},
 		{
 			"type": "html",
-			"content": "<p>More example text </p>"
+			"content": "<p>More example text text </p>"
 		},
 		{
 			"type": "xpModule",
