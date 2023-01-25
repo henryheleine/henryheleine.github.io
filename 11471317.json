@@ -96,6 +96,22 @@
 		{
 			"type": "html",
 			"content": "<p>More example text </p>"
+		},
+		{
+			"type": "xpModule",
+			"name": "mol-fe-xpmodule-comment-cta",
+			"content": {
+				"head": {
+					"scripts": [
+					],
+					"styles": [
+					]
+				},
+				"contentType": "base64",
+				"content": "PHA+IEhhdmUgeW91ciBzYXkgYnkgY2xpY2tpbmcgPGI+IEhFUkUgPC9iPjwvcD4=",
+				"scriptTemplate": "PHNjcmlwdCBhc3luYyB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0ne3VybH0nPjwvc2NyaXB0Pg==",
+				"styleTemplate": "PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0ie3VybH0iPg=="
+			}
 		}
 	],
 	"dfp": {
