@@ -7572,6 +7572,13 @@
 		}
 	],
 	"totalResults": 157,
+	"nativeModules": {
+		"3": {
+			"type": "firework",
+			"channelId": "bJDywZ",
+			"playlistId": "g206q5"
+		}
+	},
 	"xpModules": {
 		"7": {
 			"type": "xpModule",
