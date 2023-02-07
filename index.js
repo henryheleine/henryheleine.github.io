@@ -32,4 +32,11 @@ app.get("/mobile/2.0/article/11471317", function(req, res) {
     })
 })
 
+app.get("/mobile/2.0/article/11490227", function(req, res) {
+    fs.readFile("11490227.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.listen(port)
