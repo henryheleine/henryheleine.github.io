@@ -39,8 +39,8 @@ app.get("/mobile/2.0/article/11490227", function(req, res) {
     })
 })
 
-app.get("/reader-comments/p/asset/readcomments/4185780", function(req, res) {
-    fs.readFile("4185780.json", function(error, data) {
+app.get("/reader-comments/p/asset/readcomments/11670711", function(req, res) {
+    fs.readFile("11670711.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
         res.end(data)
     })
