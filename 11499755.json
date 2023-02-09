@@ -1,0 +1,131 @@
+{
+	"headless": null,
+	"headline": "This is a normal article test lc",
+	"articleId": 11499755,
+	"socialHeadline": "This is a normal article test lc",
+	"shareCount": 0,
+	"blockedCountries": [
+
+	],
+	"images": [{
+			"width": 308,
+			"imageType": "ARTICLE_PREVIEW_LARGE",
+			"caption": null,
+			"height": 185,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-m-2_1675339699742.jpg"
+		},
+		{
+			"width": 308,
+			"imageType": "LL_PUFF_DOUBLE",
+			"caption": null,
+			"height": 230,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-a-7_1675339724293.jpg"
+		},
+		{
+			"width": 87,
+			"imageType": "ARTICLE_PREVIEW_THUMB",
+			"caption": null,
+			"height": 84,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-m-4_1675339699742.jpg"
+		},
+		{
+			"width": 636,
+			"imageType": "ARTICLE LARGE DOUBLE",
+			"caption": null,
+			"height": 382,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-a-5_1675339724291.jpg"
+		},
+		{
+			"width": 1908,
+			"imageType": "ARTICLE_PREVIEW_LARGE_QUAD",
+			"caption": null,
+			"height": 1146,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-a-6_1675339724293.jpg"
+		},
+		{
+			"width": 154,
+			"imageType": "LL_PUFF_THUMB",
+			"caption": null,
+			"height": 115,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-m-3_1675339699742.jpg"
+		},
+		{
+			"width": 207,
+			"imageType": "ARTICLE_PREVIEW_MEDIUM",
+			"caption": null,
+			"height": 200,
+			"hostUrl": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814499-0-image-a-8_1675339724294.jpg"
+		}
+	],
+	"relatedArticles": [
+
+	],
+	"articleURL": "/news/article-11499755/This-normal-article-test-lc.html",
+	"nonAdservable": true,
+	"articleVersionId": 82918565,
+	"channel": "news",
+	"previewText": "This is a normal article test lc",
+	"sponsoredArticle": null,
+	"shortURL": "https://int.mol.im/a/11499755",
+	"byline": null,
+	"articleText": [{
+			"type": "html",
+			"content": "<p><span class=\"first-char\">T</span>his is a normal article test lc</p>"
+		},
+		{
+			"type": "advert"
+		},
+		{
+			"type": "html",
+			"content": "<p>This is a normal article test lc</p><p>This is a normal article test lc</p><p>This is a normal article test lc</p>"
+		},
+		{
+			"type": "image",
+			"url": "https://idev.dailymail.co.uk/1/2023/02/02/12/63814487-0-image-a-1_1675339676282.jpg",
+			"shareUrl": "https://int.mol.im/a/11499755#i-be92615148a50c45",
+			"height": "423",
+			"width": "634",
+			"caption": "test image"
+		},
+		{
+			"type": "html",
+			"content": "<p>This is a normal article test lc</p><p>This is a normal article test lc</p><p>This is a normal article test lc </p>"
+		},
+		{
+			"type": "xpModule",
+			"name": "mol-fe-xp-live-commentary-default_1.7.4-pr-30@1",
+			"content": {
+				"head": {
+					"scripts": [
+						"https://www.dailymail.co.uk/static/mol-fe/static/mol-fe-sync-bundle/6.5.0/nativeLiveCommentary.js",
+						"https://www.dailymail.co.uk/static/mol-fe/static/mol-fe-async-bundle/6.29.3/liveCommentaryNative.js",
+						"https://www.dailymail.co.uk/static/videoplayer/6.13.0/scripts/mol-fe-videoplayer.min.js",
+						"https://livecommentary.dailymailint.co.uk/apps/livecommentary_public/js/commentary.js?cb=1674721903"
+					],
+					"styles": [
+						"https://www.dailymail.co.uk/static/videoplayer/6.13.0/styles/mol-fe-videoplayer.min.css",
+						"https://livecommentary.dailymailint.co.uk/apps/livecommentary_public/css/commentary.css?cb=1674721903",
+						"https://livecommentary.dailymailint.co.uk/apps/livecommentary_public/css/news/commentary.css?cb=1674721903"
+					],
+					"syncScripts": [
+
+					]
+				},
+				"contentType": "base64",
+				"content": "PHAgc3R5bGU9IndpZHRoOiAxMDAlO3BhZGRpbmc6IDhweDt0ZXh0LWFsaWduOmNlbnRlcjtib3gtc2l6aW5nOiBib3JkZXItYm94O2ZvbnQtc2l6ZTozMnB4O2ZvbnQtZmFtaWx5OmdyYXBoaWssYXJpYWwsc2Fucy1zZXJpZjt0ZXh0LWRlY29yYXRpb246bm9uZTsiPkZvbGxvdyB0aGlzIHN0b3J5IGxpdmU8L3A+CiAgICAgICAgICA8YSBocmVmPSJodHRwczovL3d3dy5kYWlseW1haWxpbnQuY28udWsvbmV3cy9hcnRpY2xlLTExNDk5NzU1L1RoaXMtbm9ybWFsLWFydGljbGUtdGVzdC1sYy5odG1sP21vbC5uYXRpdmUuaW9zPXRydWUiIHN0eWxlPSJ3aWR0aDogMTAwJTtjb2xvcjogIzAwNGRiMztmb250LXdlaWdodDpib2xkO3BhZGRpbmc6IDhweDttYXJnaW4tYm90dG9tOiAzMnB4O3RleHQtYWxpZ246Y2VudGVyO2Rpc3BsYXk6IGJsb2NrO2JveC1zaXppbmc6IGJvcmRlci1ib3g7bWFyZ2luOiAxNnB4IDA7YmFja2dyb3VuZDogI2VlZTtib3JkZXI6IDFweCBzb2xpZCAjZGRkO2ZvbnQtc2l6ZTozMnB4O2ZvbnQtZmFtaWx5OmdyYXBoaWssYXJpYWwsc2Fucy1zZXJpZjt0ZXh0LWRlY29yYXRpb246bm9uZTsiPlRBUCBIRVJFPC9hPg==",
+				"scriptTemplate": "PHNjcmlwdCB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0ne3VybH0nPjwvc2NyaXB0Pg==",
+				"styleTemplate": "PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0ie3VybH0iPg=="
+			}
+		}
+	],
+	"sponsoredByShortLabel": null,
+	"modifiedDate": "2023-02-06T11:15:08+0000",
+	"readerComments": "R",
+	"authors": [{
+		"name": "A S Dulat",
+		"authorId": 1075832
+	}],
+	"moderationStatus": "PRM",
+	"firstPubDate": "2023-02-06T11:04:04+0000",
+	"readerCommentsCount": "0"
+}
