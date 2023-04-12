@@ -7530,13 +7530,13 @@
 		},
 		"firework": {
 			"inlineArticleEnabledForChannel": [
-
+				"ushome"
 			],
 			"inlineChannelEnabledForChannel": [
-
+				"ushome"
 			],
 			"inlineCommentEnabledForChannel": [
-
+				"ushome"
 			]
 		}
 	},
