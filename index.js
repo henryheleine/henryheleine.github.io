@@ -21,8 +21,7 @@ app.get("/health", function(req,res) {
 
 app.get("/mobile/2.0/channel/ushome", function(req, res) {
     if (req.query.isTopic) {
-        // res.redirect(301, 'https://render-4ezx.onrender.com/mobile/2.0/channel/ushome?page=1&sort=editor')
-        res.send("<html><body>condition</body></html>")
+        res.redirect(301, 'https://render-4ezx.onrender.com/mobile/2.0/channel/ushome?page=1&sort=editor')
     } else {
         fs.readFile("ushome.json", function(error, data) {
             res.writeHead(200, {"Content-Type":"application/json"})
