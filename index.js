@@ -20,10 +20,14 @@ app.get("/health", function(req,res) {
 })
 
 app.get("/mobile/2.0/channel/ushome", function(req, res) {
-    fs.readFile("ushome.json", function(error, data) {
-        res.writeHead(200, {"Content-Type":"application/json"})
-        res.end(data)
-    })
+    if (req.query.isTopic == true) {
+        res.redirect(301, 'https://render-4ezx.onrender.com/mobile/2.0/channel/ushome?page=1&sort=editor')
+    } else {
+        fs.readFile("ushome.json", function(error, data) {
+            res.writeHead(200, {"Content-Type":"application/json"})
+            res.end(data)
+        })
+    }
 })
 
 app.get("/mobile/2.0/article/11471317", function(req, res) {
