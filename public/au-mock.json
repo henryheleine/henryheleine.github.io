@@ -7901,6 +7901,11 @@
 	"paywall": {
 		"isDevModeEnabled": 1
 	},
+	"microsoft": {
+		"authUrl": "https://login.microsoftonline.com/common",
+		"clientId": "a7c55364-f2a7-404a-972f-6bb2a941cae6",
+		"enabled": 1
+	},
 	"version": "999999999",
 	"permutive": {
 		"apiKey": "17a41fc4-8bf5-4202-9fb7-e18cdca7c793",
