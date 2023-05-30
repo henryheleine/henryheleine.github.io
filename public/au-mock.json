@@ -6522,6 +6522,17 @@
 		}
 	},
 	"ads": {
+		"launchScreen": {
+			"format": "f1",
+			"color": "#004db3",
+			"timer": 3,
+			"frequencyCapPerDay": 1,
+			"startDate": "2023-01-01T00:00:00Z",
+			"imageUrl": "",
+			"endDate": "2024-01-01T00:00:00Z",
+			"enabled": 1,
+			"text": "Today's Partner"
+		},
 		"video": {
 			"prerollAdsChannelsEnabled": [
 				"home",
