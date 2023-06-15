@@ -51,6 +51,13 @@ app.get("/mobile/2.0/article/11499755", function(req, res) {
     })
 })
 
+app.get("/mobile/2.0/article/12060079", function(req, res) {
+    fs.readFile("12060079.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.get("/reader-comments/p/asset/readcomments/11888153", function(req, res) {
     fs.readFile("firework-comments.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
