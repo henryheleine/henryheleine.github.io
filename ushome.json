@@ -105,11 +105,11 @@
 					"type": "html",
 					"content": "<p>Leigh Finke, a former academic, journalist and author, was voted into her heavily left-leaning district in the Twin Cities metro area last November with 81 percent of the ballot. </p><p>She was honored alongside several others - transgender assistant Secretary of Health <a target=\"_blank\" class=\"class\" href=\"http://www.dailymail.co.uk/news/article-10617827/Candace-Owens-USA-Today-decision-Bidens-trans-health-secretary-Rachel-Levine-women-year.html\">Rachel Levine was one last year</a> - including former First Lady <a href=\"http://www.dailymail.co.uk/news/michelle_obama/index.html\" id=\"mol-3fb67f50-c85a-11ed-8676-815605f99c8c\" target=\"_blank\">Michelle Obama</a> and the United States women's soccer team.</p><p>Finke is the first transgender legislator to be elected in the state, which is part of why the paper chose to honor her. Finke transitioned in 2017. </p><p>While the state's Lieutenant Governor Peggy Flanagan praised the award, some were less than thrilled, including former White House Press Secretary Kayleigh McEnany. </p>"
 				},
-				{			
-      				"type": "firework",
-      				"channelId": "zelLpWe",
-      				"playlistId": "gdGqdo"
-    			},
+				{
+					"type": "firework",
+					"channelId": "zelLpWe",
+					"playlistId": "gdGqdo"
+				},
 				{
 					"type": "image",
 					"url": "https://i.dailymail.co.uk/1s/2023/03/22/02/68965763-11888153-image-a-20_1679451141747.jpg",
@@ -166,7 +166,22 @@
 					"content": "<p>The entirety of the new United States House of Representatives, which elected a record number of women, was also honored.</p><p>Finke even acknowledged how recently she had ascended in politics in a <a target=\"_blank\" class=\"class\" rel=\"nofollow\" href=\"https://twitter.com/leighfinke/status/1633556076057575425\">tweet</a> commenting on the award over the weekend.</p><p>'As an elected, I recognize that I just got here. The faith that has been put in my by my district, by the queer community, and by my colleagues at the capitol has been life-giving. I've only begun to fathom how much my life has changed, for the better, over the past year.' </p><p>Sarah Fields, an elected delegate in Texas and head of the pro-family group Texas Freedom Coalition, <a target=\"_blank\" class=\"class\" rel=\"nofollow\" href=\"https://twitter.com/SarahisCensored/status/1638058590131847169\">slammed the decision</a> and refused to identify her as a woman in a tweet.</p>"
 				},
 				{
-					"type": "advert"
+					"type": "xpModule",
+					"name": "mol-fe-xpmodule-polls-default@1",
+					"content": {
+						"head": {
+							"scripts": [
+								"https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-polls/1.2.14/index.js"
+							],
+							"styles": [
+								"https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-polls/1.2.14/index.css"
+							]
+						},
+						"contentType": "base64",
+						"content": "PGRpdgogICAgICAgIGRhdGEtY2hhbm5lbC1jb2xvcj0ibmV3cyIKICAgICAgICBkYXRhLWVudj0iaW50ZWdyYXRpb24iCiAgICAgICAgZGF0YS1wb2xsLWlkPSIxMTYxNjI1IgogICAgICAgIGRhdGEtdXNlLW1vYmlsZS12ZXJzaW9uPSJmYWxzZSIKICAgICAgICBkYXRhLW1vbC1mZS14cG1vZHVsZS1wb2xscwogICAgICAgIGRhdGEtbW9kdWxlLXZlcnNpb249IjEuMi4xNCIKICAgICAgPgogICAgICA8L2Rpdj4=",
+						"scriptTemplate": "PHNjcmlwdCBhc3luYyB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0ne3VybH0nPjwvc2NyaXB0Pg==",
+						"styleTemplate": "PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0ie3VybH0iPg=="
+					}
 				},
 				{
 					"type": "html",
