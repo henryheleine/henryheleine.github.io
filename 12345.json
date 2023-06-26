@@ -1,0 +1,114 @@
+{
+	"headless": true,
+	"headline": "Testing vendor consent via js post message",
+	"articleId": 12345,
+	"socialHeadline": "Testing vendor consent via js post message",
+	"shareCount": 0,
+	"blockedCountries": [
+
+	],
+	"images": [{
+			"width": 207,
+			"imageType": "ARTICLE_PREVIEW_MEDIUM",
+			"caption": "MailOnline logo",
+			"height": 200,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_207x200px.png"
+		},
+		{
+			"width": 636,
+			"imageType": "ARTICLE LARGE DOUBLE",
+			"caption": "MailOnline logo",
+			"height": 382,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_636x382px.png"
+		},
+		{
+			"width": 87,
+			"imageType": "ARTICLE_PREVIEW_THUMB",
+			"caption": "MailOnline logo",
+			"height": 84,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_87x84px.png"
+		},
+		{
+			"width": 308,
+			"imageType": "ARTICLE_PREVIEW_LARGE",
+			"caption": "MailOnline logo",
+			"height": 185,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_308x185px.png"
+		},
+		{
+			"width": 154,
+			"imageType": "LL_PUFF_THUMB",
+			"caption": "MailOnline logo",
+			"height": 115,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_154x115px.png"
+		},
+		{
+			"width": 1908,
+			"imageType": "ARTICLE_PREVIEW_LARGE_QUAD",
+			"caption": "MailOnline logo",
+			"height": 1146,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_1908x1146px.png"
+		},
+		{
+			"width": 308,
+			"imageType": "LL_PUFF_DOUBLE",
+			"caption": "MailOnline logo",
+			"height": 230,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_308x230px.png"
+		}
+	],
+	"relatedArticles": [
+
+	],
+	"articleURL": "/news/article-12345/test.html",
+	"nonAdservable": true,
+	"articleVersionId": 12345,
+	"channel": "news",
+	"previewText": "Testing vendor consent via js post message",
+	"sponsoredArticle": null,
+	"shortURL": "https://int.mol.im/a/12345",
+	"byline": null,
+	"articleText": [{
+			"type": "html",
+			"content": "<p><span class=\"first-char\">T</span>est article </p>"
+		},
+		{
+			"type": "advert"
+		},
+		{
+			"type": "xpModule",
+			"name": "mol-fe-xpmodule-consent-check",
+			"content": {
+				"head": {
+					"scripts": [
+						"https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-world-cup-countdown/1.3.0-pr-12.39/index.js"
+					],
+					"styles": [
+						"https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-world-cup-countdown/1.3.0-pr-12.39/index.css"
+					]
+				},
+				"contentType": "base64",
+				"content": "PGh0bWw+Cgk8aGVhZD4KCQk8dGl0bGU+IGNvbnNlbnQgdGVzdCA8L3RpdGxlPgoJPC9oZWFkPgoJPGJvZHk+CgkJPHA+IGNvbnNlbnQgcG9zdCBtZXNzYWdlIG1vY2sgPC9wPgoJCTxzY3JpcHQ+CgkJCXdpbmRvdy53ZWJraXQubWVzc2FnZUhhbmRsZXJzLnZlbmRvckNoZWNrLnBvc3RNZXNzYWdlKHsiYWJjIjoiMTIzNDUifSkKCQk8L3NjcmlwdD4gCgk8L2JvZHk+CjwvaHRtbD4=",
+				"scriptTemplate": "PHNjcmlwdCBhc3luYyB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0ne3VybH0nPjwvc2NyaXB0Pg==",
+				"styleTemplate": "PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0ie3VybH0iPg=="
+			}
+		},
+		{
+			"type": "html",
+			"content": "<p>More example text text </p>"
+		}
+	],
+	"dfp": {
+		"ias-bsp": ""
+	},
+	"sponsoredByShortLabel": null,
+	"modifiedDate": "2023-01-23T20:42:49+0000",
+	"readerComments": "W",
+	"authors": [{
+		"name": "Henry Heleine",
+		"authorId": 1
+	}],
+	"moderationStatus": "PRM",
+	"firstPubDate": "2023-01-23T20:38:39+0000",
+	"readerCommentsCount": "0"
+}
