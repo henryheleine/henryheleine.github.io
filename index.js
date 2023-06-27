@@ -88,4 +88,69 @@ app.get("/reader-comments/p/asset/readcomments/11888153", function(req, res) {
     })
 })
 
+app.post("/cancelledTrialerReceipt", function(req, res) {
+    fs.readFile("views/cancelledTrialerReceipt.json", function(error, data) {
+        var input = ''
+        req.on('data', function (chunk) {
+            input += chunk
+        })
+        req.on('end', function () {
+            req.rawBody = input
+            res.end(data)
+        })
+    })
+})
+
+app.post("/churnedReceipt", function(req, res) {
+    fs.readFile("churnedReceipt.json", function(error, data) {
+        var input = ''
+        req.on('data', function (chunk) {
+            input += chunk
+        })
+        req.on('end', function () {
+            req.rawBody = input
+            res.end(data)
+        })
+    })
+})
+
+app.post("/subscriberReceipt", function(req, res) {
+    fs.readFile("subscriberReceipt.json", function(error, data) {
+        var input = ''
+        req.on('data', function (chunk) {
+            input += chunk
+        })
+        req.on('end', function () {
+            req.rawBody = input
+            res.end(data)
+        })
+    })
+})
+
+app.post("/trialerReceipt", function(req, res) {
+    fs.readFile("trialerReceipt.json", function(error, data) {
+        var input = ''
+        req.on('data', function (chunk) {
+            input += chunk
+        })
+        req.on('end', function () {
+            req.rawBody = input
+            res.end(data)
+        })
+    })
+})
+
+app.post("/winbackReceipt", function(req, res) {
+    fs.readFile("winbackReceipt.json", function(error, data) {
+        var input = ''
+        req.on('data', function (chunk) {
+            input += chunk
+        })
+        req.on('end', function () {
+            req.rawBody = input
+            res.end(data)
+        })
+    })
+})
+
 app.listen(port)
