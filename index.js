@@ -89,7 +89,7 @@ app.get("/reader-comments/p/asset/readcomments/11888153", function(req, res) {
 })
 
 app.post("/cancelledTrialerReceipt", function(req, res) {
-    fs.readFile("views/cancelledTrialerReceipt.json", function(error, data) {
+    fs.readFile("cancelledTrialerReceipt.json", function(error, data) {
         var input = ''
         req.on('data', function (chunk) {
             input += chunk
