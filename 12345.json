@@ -88,7 +88,7 @@
 					]
 				},
 				"contentType": "base64",
-				"content": "PGh0bWw+Cgk8aGVhZD4KCQk8dGl0bGU+IGNvbnNlbnQgdGVzdCA8L3RpdGxlPgoJPC9oZWFkPgoJPGJvZHk+CgkJPHA+IGNvbnNlbnQgcG9zdCBtZXNzYWdlIG1vY2sgPC9wPgoJCTxzY3JpcHQ+CgkJCXdpbmRvdy53ZWJraXQubWVzc2FnZUhhbmRsZXJzLnZlbmRvckNoZWNrLnBvc3RNZXNzYWdlKHsiYWJjIjoiMTIzNDUifSkKCQk8L3NjcmlwdD4gCgk8L2JvZHk+CjwvaHRtbD4=",
+				"content": "PGh0bWw+Cgk8aGVhZD4KCQk8dGl0bGU+IGNvbnNlbnQgdGVzdCA8L3RpdGxlPgoJPC9oZWFkPgoJPGJvZHk+CgkJPHA+IGNvbnNlbnQgcG9zdCBtZXNzYWdlIG1vY2sgPC9wPgoJCTxzY3JpcHQ+CgkJCXdpbmRvdy53ZWJraXQubWVzc2FnZUhhbmRsZXJzLnZlbmRvckNoZWNrLnBvc3RNZXNzYWdlKHsKCSJzY29wZSI6ICJjaGVja1ZlbmRvciIsCgkiZGF0YSI6IHsKCQkidmVuZG9yUmVnaXN0cnkiOiAiaWFiIiwKCQkidmVuZG9ySWQiOiA3NTUsCgkJIm9uQ29uc2VudCI6ICIoKSA9PiBjb25zb2xlLmxvZyhcImNvbnNlbnRcIikiLAoJCSJvbkRpc3NlbnQiOiAiKCkgPT4gY29uc29sZS5sb2coXCJub3QgY29uc2VudFwiKSIKCX0KfSkKCQk8L3NjcmlwdD4gCgk8L2JvZHk+CjwvaHRtbD4=",
 				"scriptTemplate": "PHNjcmlwdCBhc3luYyB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0ne3VybH0nPjwvc2NyaXB0Pg==",
 				"styleTemplate": "PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0ie3VybH0iPg=="
 			}
