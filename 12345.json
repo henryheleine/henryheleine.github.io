@@ -81,10 +81,10 @@
 			"content": {
 				"head": {
 					"scripts": [
-						"https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-world-cup-countdown/1.3.0-pr-12.39/index.js"
+						
 					],
 					"styles": [
-						"https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-world-cup-countdown/1.3.0-pr-12.39/index.css"
+						
 					]
 				},
 				"contentType": "base64",
