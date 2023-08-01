@@ -6526,9 +6526,9 @@
 			"format": "f1",
 			"color": "#004db3",
 			"timer": 3,
-			"frequencyCapPerDay": 1,
+			"frequencyCapPerDay": 999999,
 			"startDate": "2023-01-01T00:00:00Z",
-			"imageUrl": "",
+			"imageUrl": "https://img3.wallspic.com/previews/2/0/1/3/6/163102/163102-apple-apples-apple_logo_steve_jobs_face-logo-clip_art-x750.jpg",
 			"endDate": "2024-01-01T00:00:00Z",
 			"enabled": 1,
 			"text": "Today's Partner"
