@@ -99,6 +99,7 @@
 		"auditCookieDomain": "www.dailymail.co.uk"
 	},
 	"push": {
+		"inlinePromoEnabled": 1,
 		"softAskConsecutiveDaysAppUsage": 2,
 		"commentRepliesEnabled": 1,
 		"clearBadgeOnLaunch": 1,
