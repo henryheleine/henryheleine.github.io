@@ -377,7 +377,8 @@
 			"articleVersionId": 88624281,
 			"channel": "news",
 			"previewText": "As the Bank of England warns of companies profiting from greedflation, research shows price increases are in some cases steaming ahead of estimated production costs increases, hurting buyers.",
-			"sponsoredArticle": null,
+			"sponsoredArticle": true,
+			"sponsored-by": "Ad Feature by Henry Heleine",
 			"shortURL": "https://mol.im/a/11888217",
 			"byline": null,
 			"articleText": [{
@@ -438,7 +439,7 @@
 					"content": "<p>Aldi insisted the supermarket would ‘always provide’ the lowest grocery prices.</p><p>Asda, Morrison’s, Waitrose, Ocado and Sainsbury’s all cited the pressures of inflation, but insisted they were working hard to keep prices ‘competitive’ for customers.</p><p>As reported in The Times, Morrisons said it had recently reduced the price of 1,000 popular products while Ocado said it was investing in price across branded and own-brand products.</p><p>There was no response from Tesco.</p>"
 				}
 			],
-			"sponsoredByShortLabel": null,
+			"sponsoredByShortLabel": "Affiliated Content",
 			"modifiedDate": "2023-04-21T15:58:03+0100",
 			"readerComments": "W",
 			"authors": [{
