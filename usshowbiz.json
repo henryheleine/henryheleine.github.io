@@ -1006,7 +1006,8 @@
 			"articleVersionId": 88518901,
 			"channel": "news",
 			"previewText": "Baroness Fox of Buckley, 52, was disinvited by the debating society at Royal Holloway, University of London, following complaints from students about her support for the joke.",
-			"sponsoredArticle": null,
+			"sponsoredArticle": true,
+			"sponsored-by": "Ad Feature by Henry Heleine",
 			"shortURL": "https://mol.im/a/11888187",
 			"byline": null,
 			"articleText": [{
@@ -1068,7 +1069,7 @@
 					"content": "<p>In an email reported by the <a target=\"_blank\" class=\"class\" rel=\"nofollow\" href=\"https://www.telegraph.co.uk/news/2023/03/20/peer-disinvited-university-debating-society-support-ricky-gervais/\">Telegraph</a>, Ms Jarvis had warned the society:  'Claire Fox retweets and praises this video of Ricky Gervais being overtly transphobic. I wonder if you have thought about the impact of bringing a person who is an advocate for hate towards trans people and publicly ridicules them.' </p><p>But Fox told The Times: 'That [the tweet] was the evidence! That made me laugh. It was an insubstantial point.' </p><p>The peer denied being transphobic and called the allegations made against her 'a malicious slur'. She also revealed this has happened to her at universities on three separate occasions, which 'is having a chilling effect'. </p><p>The RHSU said it supported cancelling the talk 'to safeguard out transgender community and will always seek to protect the safety of our marginalised people on campus'. </p><p>Royal Holloway insisted it was committed to free speech and hopes 'to to create an inclusive and supportive environment'. </p>"
 				}
 			],
-			"sponsoredByShortLabel": null,
+			"sponsoredByShortLabel": "Affiliated Content",
 			"modifiedDate": "2023-03-22T01:20:20+0000",
 			"readerComments": "W",
 			"authors": [{
