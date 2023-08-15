@@ -1,0 +1,119 @@
+{
+	"headline": "MOL-27151",
+	"articleId": 12338883,
+	"socialHeadline": "MOL-27151",
+	"shareCount": 0,
+	"blockedCountries": [
+
+	],
+	"images": [{
+			"width": 308,
+			"imageType": "LL_PUFF_DOUBLE",
+			"caption": "MailOnline logo",
+			"height": 230,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_308x230px.png"
+		},
+		{
+			"width": 636,
+			"imageType": "ARTICLE LARGE DOUBLE",
+			"caption": "MailOnline logo",
+			"height": 382,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_636x382px.png"
+		},
+		{
+			"width": 154,
+			"imageType": "LL_PUFF_THUMB",
+			"caption": "MailOnline logo",
+			"height": 115,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_154x115px.png"
+		},
+		{
+			"width": 308,
+			"imageType": "ARTICLE_PREVIEW_LARGE",
+			"caption": "MailOnline logo",
+			"height": 185,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_308x185px.png"
+		},
+		{
+			"width": 1908,
+			"imageType": "ARTICLE_PREVIEW_LARGE_QUAD",
+			"caption": "MailOnline logo",
+			"height": 1146,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_1908x1146px.png"
+		},
+		{
+			"width": 207,
+			"imageType": "ARTICLE_PREVIEW_MEDIUM",
+			"caption": "MailOnline logo",
+			"height": 200,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_207x200px.png"
+		},
+		{
+			"width": 87,
+			"imageType": "ARTICLE_PREVIEW_THUMB",
+			"caption": "MailOnline logo",
+			"height": 84,
+			"hostUrl": "https://i.dailymail.co.uk/i/pix/m_logo_87x84px.png"
+		}
+	],
+	"relatedArticles": [{
+			"headline": "The real life Da Vinci Code? Historian uncovers graves belonging to members of the Knights Templar in Staffordshire - in one of the 'most nationally important discoveries' of its kind",
+			"previewText": null,
+			"relatedId": 12408493,
+			"relatedThumbnailUrl": null,
+			"relatedUrl": "/sciencetech/article-12408493/The-real-life-Da-Vinci-Code-Historian-uncovers-graves-belonging-members-Knights-Templar-Staffordshire-one-nationally-important-discoveries-kind.html",
+			"sponsoredArticle": null,
+			"sponsoredByShortLabel": null
+		},
+		{
+			"headline": "American living in the UK shares things that she finds very 'confusing' after relocating - and the one food that 'freaked out' her friends",
+			"previewText": null,
+			"relatedId": 12406387,
+			"relatedThumbnailUrl": null,
+			"relatedUrl": "/femail/article-12406387/American-living-UK-shares-things-finds-confusing-relocating-one-food-freaked-friends.html",
+			"sponsoredArticle": null,
+			"sponsoredByShortLabel": null
+		},
+		{
+			"headline": "'Very rich Italian' is left outraged after being chased down and reprimanded by a Saint-Tropez waiter for 'only leaving a 500 euro tip' after his meal",
+			"previewText": null,
+			"relatedId": 12408161,
+			"relatedThumbnailUrl": null,
+			"relatedUrl": "/news/article-12408161/Very-rich-Italian-left-outraged-chased-reprimanded-Saint-Tropez-waiter-leaving-500-euro-tip-meal.html",
+			"sponsoredArticle": null,
+			"sponsoredByShortLabel": null
+		}
+	],
+	"articleURL": "/news/article-12338883/MOL-27151.html",
+	"nonAdservable": false,
+	"articleVersionId": 92341123,
+	"channel": "news",
+	"previewText": "MOL-27151",
+	"shortURL": "https://int.mol.im/a/12338883",
+	"articleText": [{
+			"type": "threads.net",
+			"content": "https://www.threads.net/@mancity/post/Cv5VLuqsD-b"
+		},
+		{
+			"type": "twitter",
+			"content": "https://twitter.com/DailyMailUK/status/1690800451376037888"
+		},
+		{
+			"type": "tiktok",
+			"content": "https://www.tiktok.com/@funny_animals737/video/7215636561084304645"
+		},
+		{
+			"type": "instagram",
+			"content": "https://www.instagram.com/p/CvGkUoxsFLf/"
+		}
+	],
+	"modifiedDate": "2023-08-14T15:53:18+0100",
+	"readerComments": "W",
+	"authors": [{
+		"name": "Ernestas",
+		"authorId": 1535393
+	}],
+	"moderationStatus": "PRM",
+	"firstPubDate": "2023-08-14T15:45:39+0100",
+	"readerCommentsCount": "0"
+}
