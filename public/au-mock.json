@@ -6524,15 +6524,15 @@
 	},
 	"ads": {
 		"launchScreen": {
-			"format": "f1",
+			"format": "f4",
 			"color": "#004db3",
-			"timer": 3,
+			"timer": 4,
 			"frequencyCapPerDay": 999999,
 			"startDate": "2023-01-01T00:00:00Z",
 			"imageUrl": "https://img3.wallspic.com/previews/2/0/1/3/6/163102/163102-apple-apples-apple_logo_steve_jobs_face-logo-clip_art-x750.jpg",
-			"endDate": "2026-01-01T00:00:00Z",
+			"endDate": "2050-01-01T00:00:00Z",
 			"enabled": 1,
-			"text": "Today's Partner"
+			"text": ""
 		},
 		"video": {
 			"prerollAdsChannelsEnabled": [
