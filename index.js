@@ -44,6 +44,13 @@ app.get("/mobile/2.0/channel/travel", function(req, res) {
     })
 })
 
+app.get("/mobile/2.0/channel/auhome", function(req, res) {
+    fs.readFile("auhome.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.get("/mobile/2.0/article/11471317", function(req, res) {
     fs.readFile("11471317.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
