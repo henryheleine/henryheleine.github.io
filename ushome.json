@@ -5,6 +5,9 @@
 			"articleId": 11888153,
 			"socialHeadline": "Transgender lawmaker from Minnesota wins USA Today 'Women of the Year'",
 			"shareCount": 949,
+			"tagLabel": "Live",
+      		"tagColour": "#FF0000",
+      		"showAsLive": true,
 			"blockedCountries": [
 
 			],
@@ -284,6 +287,9 @@
 			"articleId": 11888217,
 			"socialHeadline": "Supermarket essentials DOUBLE in price as BoE warns of 'greedflation' ",
 			"shareCount": 118,
+			"tagLabel": "Live",
+      		"tagColour": "#FF0000",
+      		"showAsLive": true,
 			"blockedCountries": [
 
 			],
@@ -456,6 +462,9 @@
 			"articleId": 11888261,
 			"socialHeadline": "People who wear work uniform could be missing out on a tax rebate",
 			"shareCount": 25,
+			"tagLabel": "Exclusive",
+      		"tagColour": "#FF0000",
+      		"showAsLive": false,
 			"blockedCountries": [
 
 			],
@@ -598,6 +607,9 @@
 			"headless": null,
 			"headline": "Boy George and his Culture Club bandmates to pay £1.75 million to ex-drummer as High Court trial which could have racked up millions in costs is avoided with just a week to go",
 			"articleId": 11888247,
+			"tagLabel": "Exclusive",
+      		"tagColour": "#FF0000",
+      		"showAsLive": false,
 			"socialHeadline": "Boy George and Culture Club bandmates to pay £1.75m to ex-drummer",
 			"shareCount": 47,
 			"blockedCountries": [
@@ -2154,6 +2166,9 @@
 			"articleId": 11886443,
 			"socialHeadline": "Why won't power firms repair our  broken smart meters? ",
 			"shareCount": 133,
+			"tagLabel": "Exclusive",
+      		"tagColour": "#FF0000",
+      		"showAsLive": false,
 			"blockedCountries": [
 
 			],
@@ -3340,6 +3355,9 @@
 			"articleId": 11887669,
 			"socialHeadline": "TOM LEANOARD on Gwyneth Paltrow's £245k 'hit-and-run' ski crash case ",
 			"shareCount": 471,
+			"tagLabel": "Live",
+      		"tagColour": "#FF0000",
+      		"showAsLive": true,
 			"blockedCountries": [
 
 			],

@@ -5,6 +5,9 @@
 			"articleId": 11888153,
 			"socialHeadline": "Transgender lawmaker from Minnesota wins USA Today 'Women of the Year'",
 			"shareCount": 949,
+			"tagLabel": "Exclusive",
+      		"tagColour": "#FF0000",
+      		"showAsLive": false,
 			"blockedCountries": [
 
 			],
@@ -456,6 +459,9 @@
 			"articleId": 11888261,
 			"socialHeadline": "People who wear work uniform could be missing out on a tax rebate",
 			"shareCount": 25,
+			"tagLabel": "Live",
+      		"tagColour": "#FF0000",
+      		"showAsLive": true,
 			"blockedCountries": [
 
 			],
@@ -600,6 +606,9 @@
 			"articleId": 11888247,
 			"socialHeadline": "Boy George and Culture Club bandmates to pay £1.75m to ex-drummer",
 			"shareCount": 47,
+			"tagLabel": "Exclusive",
+      		"tagColour": "#FF0000",
+      		"showAsLive": false,
 			"blockedCountries": [
 
 			],
@@ -945,6 +954,9 @@
 			"articleId": 11888187,
 			"socialHeadline": "Peer's talk on free speech cancelled over retweeting Ricky Gervais gag",
 			"shareCount": 35,
+			"tagLabel": "Live",
+      		"tagColour": "#FF0000",
+      		"showAsLive": true,
 			"blockedCountries": [
 
 			],
@@ -5920,6 +5932,9 @@
 			"articleId": 11885249,
 			"socialHeadline": "Fans spot Kate Middleton in a new picture from her brother's wedding",
 			"shareCount": 17,
+			"tagLabel": "Exclusive",
+      		"tagColour": "#FF0000",
+      		"showAsLive": false,
 			"blockedCountries": [
 
 			],
@@ -6107,6 +6122,9 @@
 			"articleId": 11886151,
 			"socialHeadline": "Gwyneth Paltrow Utah ski trial Day 1",
 			"shareCount": 1796,
+			"tagLabel": "Live",
+      		"tagColour": "#FF0000",
+      		"showAsLive": true,
 			"blockedCountries": [
 
 			],
