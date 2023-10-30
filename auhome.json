@@ -360,6 +360,7 @@
         {
             "headline": "Florida lawyer accused of stealing $450,000 from his family's trust fund is charged with murdering 'his father after he was found shot dead in a pool of blood at the office' ",
             "articleId": 12264713,
+            "isMailPlus": true,
             "socialHeadline": "Florida lawyer charged with fatally shooting 'his lawyer father'",
             "shareCount": 61,
             "blockedCountries": [],
@@ -801,6 +802,7 @@
         {
             "headline": "What do YOU see first? Deceptive optical illusion reveals if you are too independent or have strong intuition ",
             "articleId": 12263671,
+            "isMailPlus": true,
             "socialHeadline": "Optical illusion reveals whether you are too independent",
             "shareCount": 261,
             "blockedCountries": [],
@@ -969,6 +971,7 @@
         {
             "headline": "Heat got you down? Summer seasonal affective disorder is MORE deadly than winter depression, as suicide rates peak during spring and summer months ",
             "articleId": 12264629,
+            "isMailPlus": true,
             "socialHeadline": "Summer seasonal affective disorder MORE deadly than winter depression",
             "shareCount": 97,
             "blockedCountries": [],
