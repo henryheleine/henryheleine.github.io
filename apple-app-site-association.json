@@ -1,0 +1,20 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "VZF544NPFA.com.and.mailonline" ],
+             "components": [
+               {
+                  "/": "/registration/*",
+                  "comment": "Matches any URL with a path that starts with /registration/."
+               },
+               {
+                  "/": "/reg/*",
+                  "?": { "articleNumber": "????" },
+                  "comment": "Matches any URL with a path that starts with /reg/ and that has a query item with name 'articleNumber' and a value of exactly four characters."
+               }
+             ]
+           }
+       ]
+   }
+}
