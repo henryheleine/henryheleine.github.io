@@ -21,6 +21,11 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
     })
 })
 
+app.get("/registration/activate.html", function(req,res) {
+    res.writeHead(200, {"Content-Type":"text/html"})
+    res.end()
+})
+
 app.get("/health", function(req,res) {
     res.writeHead(200, {"Content-Type":"text/html"})
     res.end()
