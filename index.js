@@ -15,7 +15,7 @@ app.get("/enterprisebuild/v5.5", function(req, res) {
 })
 
 app.get("/.well-known/apple-app-site-association", function(req, res) {
-    res.send("{ \"applinks\": { \"apps\": [ ], \"details\": [{ \"appID\": \"VZF544NPFA.com.and.mailonline\", \"paths\": [ ] } ] } }")
+    res.send("{ \"applinks\": { \"apps\": [ ], \"details\": [{ \"appID\": \"VZF544NPFA.com.and.mailonline\", \"paths\": [ \"*\" ] } ] } }")
 })
 
 app.get("/registration/activate.html", function(req,res) {
