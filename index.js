@@ -15,10 +15,7 @@ app.get("/enterprisebuild/v5.5", function(req, res) {
 })
 
 app.get("/.well-known/apple-app-site-association", function(req, res) {
-    fs.readFile("apple-app-site-association.json", function(error, data) {
-        res.writeHead(200, {"Content-Type":"application/json"})
-        res.end(data)
-    })
+    res.send("{ \"applinks\": { \"apps": [ ], \"details\": [{ \"appID\": \"VZF544NPFA.com.and.mailonline\", \"paths\": [ ] } ] } }")
 })
 
 app.get("/registration/activate.html", function(req,res) {
