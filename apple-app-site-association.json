@@ -2,8 +2,8 @@
 	"applinks": {
 		"details": [{
  			"appID": "VZF544NPFA.com.and.mailonline",
-			"path": [{
-				"/registration/activate.html"
+			"components": [{
+				"/": "reg*"
 			}]
 		}]
 	}

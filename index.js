@@ -22,8 +22,7 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 })
 
 app.get("/registration/activate.html", function(req,res) {
-    res.writeHead(200, {"Content-Type":"text/html"})
-    res.end()
+    res.send("<html><head><title>test</title></head><body><a href='https://render-4ezx.onrender.com/registration/activate.html?email=diego.manilla%40mailonline.co.uk&vc=e86b6b67-32e5-4170-bc9d-1b40445bd821'>LINK</a></body></html>")
 })
 
 app.get("/health", function(req,res) {
