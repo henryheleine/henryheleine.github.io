@@ -1,0 +1,12 @@
+{
+	"applinks": {
+		"details": [{
+ 			"appID": "VZF544NPFA.com.and.mailonline",
+			"components": [{
+				"/": "/registration/activate.html",
+				"?": { "vc": "*" },
+				"comment": "Deeplink into mol ios app for mail+ verification email links"
+			}]
+		}]
+	}
+}

@@ -14,6 +14,13 @@ app.get("/enterprisebuild/v5.5", function(req, res) {
     res.send("<html><head><style>{height:100%;width:100%;}body{padding:36px;font-size:42px;}a{padding:40px;margin120px;display:block;background-color:#3333AA;color:#fff;font-size:80px;}p{margin:20px;}img{margin:26px;}</style></head><body><center><h1><a href='itms-services://?action=download-manifest&amp;url=https://render-4ezx.onrender.com/MailOnline.plist'>MailOnline Enterprise<BR>App v5.5 (550000000027)</a></h1><p>Tap the link above, after a short pause an alert will appear - tap Install:<br><img height='190px' width='412px' src='https://render-4ezx.onrender.com/alertimg.png'><br>There is no further response. Go to your home/springboard and see the app icon installing.</p><br>RELEASE NOTES: Google login is not supported in test environment but Facebook login should work as expected.<br><br><b>FIRST TIME: </b><br>You will need to 'trust' each enterprise build at least once. Go to Settings and then:</center><ul style='list-style-type: none;'><li> - General </li><li> - Profiles & Device Management </li><li> - Associated Newspapers Limited </li><li> - Trust. </li></ul></p></body></html>")
 })
 
+app.get("/.well-known/apple-app-site-association", function(req, res) {
+    fs.readFile("apple-app-site-association.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.get("/health", function(req,res) {
     res.writeHead(200, {"Content-Type":"text/html"})
     res.end()
