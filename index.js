@@ -41,6 +41,13 @@ app.get("/mobile/2.0/channel/ushome", function(req, res) {
     }
 })
 
+app.get("/mobile/2.0/channel/mailplus", function(req, res) {
+    fs.readFile("mailplus.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.get("/mobile/2.0/channel/usshowbiz", function(req, res) {
     fs.readFile("usshowbiz.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
