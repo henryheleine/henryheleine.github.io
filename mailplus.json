@@ -1631,7 +1631,6 @@
             "articleVersionId": 96690197,
             "channel": "news",
             "previewText": "Follow MailOnline's live coverage of today's Autumn Statement as Chancellor Jeremy Hunt starts cutting taxes and pushes for business growth ahead of next year's election.",
-            "showAsLive": true,
             "panel": {
                 "panelId": "139390173",
                 "panelType": "Alpha"
@@ -4217,7 +4216,6 @@
             "articleVersionId": 96692899,
             "channel": "news",
             "previewText": "Follow MailOnline's live blog for the latest updates as Israel agrees to a deal to see 50 women and children kidnapped by Hamas gunmen on October 7 freed during a temporary truce.",
-            "showAsLive": true,
             "panel": {
                 "panelId": "139390173",
                 "panelType": "Alpha"
@@ -5055,7 +5053,8 @@
             ],
             "headline": "Now shamed Paralympian Oscar Pistorius' chances of winning freedom this week are boosted after mother of model girlfriend he murdered in cold blood decides NOT to oppose his parole bid",
             "showAsExclusiveDate": "2023-11-22T01:28:57+0000",
-            "tagLabel": "Exclusive",
+            "tagLabels": ["Live"],
+            "showAsLive": true,
             "pagePositionId": 2122110789,
             "articleId": 12777475,
             "socialHeadline": "Pistorius freedom bid boost as victim's mother does not oppose parole",
@@ -8231,7 +8230,7 @@
             ],
             "headline": "Retired nurse, 71, vows to 'fight for the older generation' after she was hit with a parking fine despite ticket machine being out of order - then told she should have downloaded an app to pay",
             "showAsExclusiveDate": "2023-11-22T07:19:00+0000",
-            "tagLabel": "Exclusive",
+            "tagLabels": ["Exclusive"],
             "pagePositionId": 2122110889,
             "articleId": 12775243,
             "socialHeadline": "Retired nurse's fury after she was hit with a parking fine",
