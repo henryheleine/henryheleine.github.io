@@ -12,6 +12,11 @@
                         "comment": "Matches any URL with a path that starts with /registration/activate.html and that has query items email and vc."
                     },
                     {
+                        "/": "/registration/oneaccount/verify.html",
+                        "?": { "email": "*", "vc": "*" },
+                        "comment": "Matches any URL with a path that starts with /registration/oneaccount/verify.html and that has query items email and vc."
+                    },
+                    {
                         "/": "*",
                         "exclude": true,
                         "comment": "Instructs the system not to open any other URL as a universal link."
