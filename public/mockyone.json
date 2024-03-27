@@ -7564,6 +7564,7 @@
             "enabled": 0
         },
         "launchScreen": {
+            "mLogoColor": "#000000",
             "format": "f4",
             "color": "#000000",
             "timer": 4,
