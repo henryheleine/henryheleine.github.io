@@ -111,6 +111,13 @@ app.get("/mobile/2.0/article/12066081", function(req, res) {
     })
 })
 
+app.get("/mobile/2.0/article/13595871", function(req, res) {
+    fs.readFile("13595871.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.get("/mobile/2.0/article/12065971", function(req, res) {
     fs.readFile("12065971.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
