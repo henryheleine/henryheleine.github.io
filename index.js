@@ -12,6 +12,7 @@ app.get("/", function(req,res) {
 
 app.get("/ua", function(req,res) {
     const userAgent = req.headers['user-agent']
+    console.log("user agent = " + userAgent)
     res.writeHead(200, {"Content-Type":"text/html"})
     res.end("{ \"userAgent\": \"" + userAgent + "\"}")
 })
