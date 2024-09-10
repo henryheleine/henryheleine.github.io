@@ -336,19 +336,19 @@
     "articleText": [
         {
             "type": "html",
-            "content": "1"
+            "content": "&nbsp;"
         },
         {
             "type": "html",
-            "content": "2"
+            "content": ""
         },
         {
             "type": "html",
-            "content": "3"
+            "content": "<br>"
         },
         {
             "type": "html",
-            "content": "4"
+            "content": ""
         },
         {
             "type": "xpModule",
