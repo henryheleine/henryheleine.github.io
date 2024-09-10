@@ -203,6 +203,13 @@ app.get("/mobile/2.0/article/12512879", function(req, res) {
     })
 })
 
+app.get("/mobile/2.0/article/13820593", function(req, res) {
+    fs.readFile("13820593.json", function(error, data) {
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end(data)
+    })
+})
+
 app.get("/mobile/2.0/article/243", function(req, res) {
     fs.readFile("243.json", function(error, data) {
         res.writeHead(200, {"Content-Type":"application/json"})
