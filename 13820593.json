@@ -335,6 +335,18 @@
     "shortURL": "https://mol.im/a/13820593",
     "articleText": [
         {
+            "type": "html",
+            "content": ""
+        },
+        {
+            "type": "html",
+            "content": ""
+        },
+        {
+            "type": "html",
+            "content": ""
+        },
+        {
             "type": "xpModule",
             "name": "mol-fe-xpmodule-live-blog-header-default@1",
             "modifiedDate": null,
