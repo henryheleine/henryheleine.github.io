@@ -9,6 +9,7 @@ const openai = new OpenAI({
   apiKey: process.env['OPENAI_API_KEY']
 });
 
+
 app.use(express.static("public"))
 
 app.get("/", function(req,res) {
