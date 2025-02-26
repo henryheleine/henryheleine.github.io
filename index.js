@@ -1,5 +1,6 @@
 import OpenAI from "openai"
 import express from "express"
+import bodyParser from "body-parser"
 import fs from "fs"
 import http from "http"
 
@@ -11,6 +12,7 @@ const openai = new OpenAI({
 
 
 app.use(express.static("public"))
+app.use(bodyParser.json())
 
 app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
@@ -37,9 +39,9 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 
 app.post("/data", (req, res) => {
     console.log("start id request")
-    const requestData = req.body;
-    console.log("Received data:", requestData);
-    res.status(200).send("Data received successfully");
+    console.log(req.body)
+    res.send(request.body)
+    // res.status(200).send("Data received successfully");
     // const completion = openai.chat.completions.create({
     //     model: "gpt-4o-mini",
     //     store: true,
