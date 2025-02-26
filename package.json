@@ -7,6 +7,10 @@
     "express": "4.21.2",
     "openai": "4.85.3"
   },
+  "engines": {
+    "node": "23.8.0",
+    "npm": "11.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/henryheleine/henryheleine.github.io.git"
