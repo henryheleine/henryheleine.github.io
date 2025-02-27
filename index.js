@@ -39,8 +39,14 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 
 app.post("/data", (req, res) => {
     console.log("start id request")
-    console.log(req.body)
-    res.send(req.body)
+    var output = ""
+    req.on('data', (chunk) => {
+        output = output + chunk
+    })
+    req.on('end', () => {
+        console.log(output)
+        res.send('Upload complete')
+    })
     // res.status(200).send("Data received successfully");
     // const completion = openai.chat.completions.create({
     //     model: "gpt-4o-mini",
