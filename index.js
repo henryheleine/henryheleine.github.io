@@ -46,6 +46,8 @@ app.post("/data", (req, res) => {
 
 function processImage(base64ImageData) {
     const input = "data:image/jpeg;base64," + base64ImageData
+    console.log("input = ")
+    console.log(input)
     try {
         const response = openai.chat.completions.create({
             model: "gpt-4o-mini",
