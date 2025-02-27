@@ -40,10 +40,10 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 app.post("/data", (req, res) => {
     console.log("start id request")
     const base64ImageData = req.body.imageData
-    const result = processImage(base64ImageData)
-    console.log("result =")
-    console.log(result)
-    res.status(200).send(result)
+    const content = processImage(base64ImageData)
+    console.log("content =")
+    console.log(content)
+    res.type('html').send(content)
 })
 
 function processImage(base64ImageData) {
@@ -67,7 +67,8 @@ function processImage(base64ImageData) {
             max_tokens: 256
         })
         completion.then((result) => {
-            return result.choices[0].message.content
+            const content = result.choices[0].message.content
+            return content
         })
     } catch (error) {
         console.error("Error processing image:", error)
