@@ -49,7 +49,7 @@ function processImage(base64ImageData) {
     console.log("input = ")
     console.log(input)
     try {
-        const response = openai.chat.completions.create({
+        const completion = openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{
                 role: "user",
@@ -62,12 +62,9 @@ function processImage(base64ImageData) {
                     },
                 }],
             }],
-            max_tokens: 300
+            max_tokens: 256
         })
-        console.log("open ai choices")
-        console.log(response.choices)
-        return ""
-        // return response.choices[0].message.content
+        completion.then((result) => res.type("html").send(result.choices[0].message))
     } catch (error) {
         console.error("Error processing image:", error)
         throw error
