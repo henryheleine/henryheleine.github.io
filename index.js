@@ -66,9 +66,8 @@ function processImage(base64ImageData) {
         })
         console.log("open ai choices")
         console.log(response.choices)
-        console.log("open ai choice 0 message")
-        console.log(response.choices[0].message)
-        return response.choices[0].message.content
+        return ""
+        // return response.choices[0].message.content
     } catch (error) {
         console.error("Error processing image:", error)
         throw error
