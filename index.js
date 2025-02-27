@@ -41,7 +41,7 @@ app.post("/data", (req, res) => {
     console.log("start id request")
     const base64ImageData = req.body.imageData
     const result = processImage(base64ImageData)
-    res.status(200).send("Done")
+    res.status(200).send(result)
 })
 
 function processImage(base64ImageData) {
@@ -65,10 +65,7 @@ function processImage(base64ImageData) {
             max_tokens: 256
         })
         completion.then((result) => {
-            console.log("4")
-            console.log(result.choices[0].message.content)
-            console.log("5")
-            return ""
+            return result.choices[0].message.content
         })
     } catch (error) {
         console.error("Error processing image:", error)
