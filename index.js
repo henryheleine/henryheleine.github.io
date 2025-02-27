@@ -7,7 +7,7 @@ import http from "http"
 const app = express()
 const port = process.env.PORT || 5050
 const openai = new OpenAI({
-  apiKey: "" // process.env['OPENAI_API_KEY']
+  apiKey: process.env['OPENAI_API_KEY']
 });
 
 
@@ -40,34 +40,12 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 app.post("/data", (req, res) => {
     console.log("start id request")
     const base64ImageData = req.body.imageData
-    console.log("base64ImageData = ")
-    console.log(base64ImageData)
     const result = processImage(base64ImageData)
-
-    // res.status(200).send("Data received successfully");
-    // const completion = openai.chat.completions.create({
-    //     model: "gpt-4o-mini",
-    //     store: true,
-    //     messages: [
-    //         {"role": "user", "content": "write a haiku about ai"},
-    //     ],
-    // })
-    // completion.then((result) => res.type('html').send(result.choices[0].message))
-
-    console.log("base64ImageData")
-    console.log(req.body)
-    console.log("open ai result")
-    console.log(result)
-    console.log("end id request")
-
     res.status(200).send("Done")
 })
 
 function processImage(base64ImageData) {
-    console.log("data:image/jpeg;base64... 1 = ")
-    console.log("data:image/jpeg;base64,${base64ImageData}")
-    console.log("data:image/jpeg;base64... 2 = ")
-    console.log('data:image/jpeg;base64,${base64ImageData}')
+    const input = "data:image/jpeg;base64," + base64ImageData
     try {
         const response = openai.chat.completions.create({
             model: "gpt-4-vision-preview",
@@ -78,7 +56,7 @@ function processImage(base64ImageData) {
                 }, {
                     type: "image_url",
                     image_url: {
-                        url: "data:image/jpeg;base64,${base64ImageData}"
+                        url: input
                     },
                 }],
             }],
