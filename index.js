@@ -65,8 +65,17 @@ function processImage(base64ImageData) {
             max_tokens: 256
         })
         completion.then((result) => {
-            console.log("result =")
-            console.log(result)
+            console.log("1")
+            const obj = JSON.parse(result)
+            console.log("2")
+            console.log(obj)
+            console.log("3")
+            console.log(obj.choices)
+            console.log("4")
+            console.log(obj.choices[0])
+            console.log("5")
+            console.log(obj.choices[0].message)
+            console.log("6")
             return ""
         })
     } catch (error) {
