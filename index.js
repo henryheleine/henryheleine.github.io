@@ -41,6 +41,8 @@ app.post("/data", (req, res) => {
     console.log("start id request")
     const base64ImageData = req.body.imageData
     const result = processImage(base64ImageData)
+    console.log("result =")
+    console.log(result)
     res.status(200).send(result)
 })
 
