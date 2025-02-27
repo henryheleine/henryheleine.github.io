@@ -40,13 +40,13 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 app.post("/data", (req, res) => {
     console.log("start id request")
     const base64ImageData = req.body.imageData
-    const content = processImage(base64ImageData)
-    console.log("content =")
+    const content = await processImage(base64ImageData)
+    console.log("external content =")
     console.log(content)
     res.type('html').send(content)
 })
 
-function processImage(base64ImageData) {
+async function processImage(base64ImageData) {
     const input = "data:image/jpeg;base64," + base64ImageData
     console.log("input = ")
     console.log(input)
@@ -68,6 +68,8 @@ function processImage(base64ImageData) {
         })
         completion.then((result) => {
             const content = result.choices[0].message.content
+            print("internal content =")
+            print(content)
             return content
         })
     } catch (error) {
