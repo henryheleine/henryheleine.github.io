@@ -68,7 +68,7 @@ async function processImage(base64ImageData) {
             }],
             max_tokens: 256
         })
-        return result.choices[0].message.content
+        return completion.choices[0].message.content
     } catch (error) {
         console.error("Error processing image:", error)
         throw error
