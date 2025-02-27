@@ -12,7 +12,8 @@ const openai = new OpenAI({
 
 
 app.use(express.static("public"))
-app.use(bodyParser.json())
+app.use(bodyParser.json({limit: '5mb', extended: true}))
+app.use(bodyParser.urlencoded({limit: "5mb", extended: true, parameterLimit:5000}))
 
 app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
@@ -39,14 +40,8 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 
 app.post("/data", (req, res) => {
     console.log("start id request")
-    var output = ""
-    req.on("data", (chunk) => {
-        output = output + chunk
-    })
-    req.on("end", () => {
-        console.log(output)
-        res.send("Upload complete")
-    })
+    console.log(req.body)
+    res.send(req.body)
     // res.status(200).send("Data received successfully");
     // const completion = openai.chat.completions.create({
     //     model: "gpt-4o-mini",
