@@ -12,8 +12,7 @@ const openai = new OpenAI({
 
 
 app.use(express.static("public"))
-app.use(bodyParser.json({limit: '5mb', extended: true}))
-app.use(bodyParser.urlencoded({limit: "5mb", extended: true, parameterLimit:5000}))
+app.use(bodyParser.json({limit: '50mb', extended: true}))
 
 app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
