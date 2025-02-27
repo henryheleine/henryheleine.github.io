@@ -53,7 +53,7 @@ async function processImage(base64ImageData) {
     console.log("input = ")
     console.log(input)
     try {
-        const completion = openai.chat.completions.create({
+        const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{
                 role: "user",
