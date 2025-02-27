@@ -39,8 +39,9 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 
 app.post("/data", (req, res) => {
     console.log("start id request")
-    console.log(req.body)
-    res.send(req.body)
+    const base64ImageData = req.body
+    const result = processImage(imageBase64)
+
     // res.status(200).send("Data received successfully");
     // const completion = openai.chat.completions.create({
     //     model: "gpt-4o-mini",
@@ -50,7 +51,45 @@ app.post("/data", (req, res) => {
     //     ],
     // })
     // completion.then((result) => res.type('html').send(result.choices[0].message))
+
+    console.log("base64ImageData")
+    console.log(req.body)
+    console.log("open ai result")
+    console.log(result)
     console.log("end id request")
+
+    res.status(200).send("Done")
 })
+
+function processImage(base64Image) {
+  try {
+    const response = openai.chat.completions.create({
+      model: "gpt-4-vision-preview",
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: "Describe this image" },
+            {
+              type: "image_url",
+              image_url: {
+                url: "data:image/jpeg;base64,${base64Image}",
+              },
+            },
+          ],
+        },
+      ],
+      max_tokens: 300,
+    })
+    console.log("open ai choices")
+    console.log(response.choices)
+    console.log("open ai choice 0 message")
+    console.log(response.choices[0].message)
+    return response.choices[0].message.content
+  } catch (error) {
+    console.error("Error processing image:", error)
+    throw error
+  }
+}
 
 app.listen(port)
