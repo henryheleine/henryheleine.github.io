@@ -66,16 +66,12 @@ function processImage(base64ImageData) {
         })
         completion.then((result) => {
             console.log("1")
-            const obj = JSON.parse(result)
+            console.log(result.choices)
             console.log("2")
-            console.log(obj)
+            console.log(result.choices[0])
             console.log("3")
-            console.log(obj.choices)
+            console.log(result.choices[0].message)
             console.log("4")
-            console.log(obj.choices[0])
-            console.log("5")
-            console.log(obj.choices[0].message)
-            console.log("6")
             return ""
         })
     } catch (error) {
