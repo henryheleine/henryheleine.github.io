@@ -48,7 +48,7 @@ function processImage(base64ImageData) {
     const input = "data:image/jpeg;base64," + base64ImageData
     try {
         const response = openai.chat.completions.create({
-            model: "gpt-4-vision-preview",
+            model: "gpt-4o-mini",
             messages: [{
                 role: "user",
                 content: [{
