@@ -65,8 +65,9 @@ function processImage(base64ImageData) {
             max_tokens: 256
         })
         completion.then((result) => {
-            console.log(choices)
-            return result.choices[0].message
+            console.log("result =")
+            console.log(result)
+            return ""
         })
     } catch (error) {
         console.error("Error processing image:", error)
