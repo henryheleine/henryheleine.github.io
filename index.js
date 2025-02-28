@@ -9,7 +9,7 @@ const port = process.env.PORT || 5050
 const openai = new OpenAI({
   apiKey: process.env['OPENAI_API_KEY']
 });
-
+const prompt = process.env['PROMPT']
 
 app.use(express.static("public"))
 app.use(bodyParser.json({limit: '50mb', extended: true}))
@@ -58,7 +58,7 @@ async function processImage(base64ImageData) {
             messages: [{
                 role: "user",
                 content: [{
-                    type: "text", text: "Describe this image"
+                    type: "text", text: prompt
                 }, {
                     type: "image_url",
                     image_url: {
