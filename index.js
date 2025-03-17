@@ -52,8 +52,7 @@ app.post("/data", (req, res) => {
 async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
     const fullPrompt = "Given my location is " + country + ". " + prompt
-    console.log("fullPrompt = ")
-    console.log(input)
+    console.log("fullPrompt = " + fullPrompt)
     try {
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
