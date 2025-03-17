@@ -40,7 +40,8 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 app.post("/data", (req, res) => {
     console.log("start id request")
     const base64ImageData = req.body.imageData
-    processImage(base64ImageData).then(response => {
+    const country = req.body.country
+    processImage(base64ImageData, country).then(response => {
         console.log(response)
         res.type('html').send(response)
     })
@@ -48,9 +49,10 @@ app.post("/data", (req, res) => {
     
 })
 
-async function processImage(base64ImageData) {
+async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
-    console.log("input = ")
+    const fullPrompt = "Given my location is " + country + ". " + prompt
+    console.log("fullPrompt = ")
     console.log(input)
     try {
         const completion = await openai.chat.completions.create({
