@@ -48,7 +48,7 @@ app.post("/data", (req, res) => {
 
 async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
-    const fullPrompt = "Given my location is " + country + ". " + prompt
+    const fullPrompt = (country == "unknown" ? "" : ("Given my location is " + country + ". ")) + prompt
     console.log("fullPrompt = " + fullPrompt)
     try {
         const completion = await openai.chat.completions.create({
