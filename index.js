@@ -23,6 +23,10 @@ app.get("/health", function(req,res) {
     res.end()
 })
 
+app.get("/privacy", function(req,res) {
+    res.type('html').send("<html><body><h1>Privacy Policy</h1><p>Full information to follow</p></body></html>")
+})
+
 app.get("/ua", function(req,res) {
     const userAgent = req.headers['user-agent']
     console.log("user agent = " + userAgent)
