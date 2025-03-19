@@ -24,7 +24,7 @@ app.get("/health", function(req,res) {
 })
 
 app.get("/privacy", function(req,res) {
-    res.type('html').send("<html><body><h1>Privacy Policy</h1><p>Full information for Henry Heleine Privacy 2025 to follow soon. Please contact me via email henryheleine86@gmail.com for further queries.</p></body></html>")
+    res.type('html').send("<html><body><h1>Privacy Policy</h1><p>Information for Henry Heleine Privacy 2025 to follow soon. Contact me via emailing henryheleine86@gmail.com with further queries.</p></body></html>")
 })
 
 app.get("/ua", function(req,res) {
