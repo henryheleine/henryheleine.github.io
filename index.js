@@ -46,7 +46,8 @@ app.post("/data", (req, res) => {
     const country = req.body.country
     processImage(base64ImageData, country).then(response => {
         console.log(response)
-        res.type("json").send("{ \"content\": \"" + response + "\" }")
+        res.writeHead(200, {"Content-Type":"application/json"})
+        res.end("{ \"content\": \"" + response + "\" }")
     })
 })
 
