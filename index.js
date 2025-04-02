@@ -24,7 +24,11 @@ app.get("/health", function(req,res) {
 })
 
 app.get("/privacy", function(req,res) {
-    res.type('html').send("<html><body><h1>Privacy Policy</h1><p>Information for Henry Heleine Privacy 2025 to follow soon. Contact me via emailing henryheleine86@gmail.com with further queries.</p></body></html>")
+    res.type('html').send("<html><body><h1>Privacy Policy</h1><p>Information for Henry Heleine Privacy 2025 to follow soon. Contact me by emailing henryheleine86@gmail.com for further information.</p></body></html>")
+})
+
+app.get("/support", function(req,res) {
+    res.type('html').send("<html><body><h1>Support</h1><p>Information for Henry Heleine support to follow soon. Contact me by emailing henryheleine86@gmail.com for further information.</p></body></html>")
 })
 
 app.get("/ua", function(req,res) {
