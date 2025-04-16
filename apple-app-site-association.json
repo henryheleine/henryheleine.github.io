@@ -3,18 +3,13 @@
         "details": [
             {
                 "appIDs": [
-                    "VZF544NPFA.com.and.mailonline"
+                    "PP5D6ER394.com.henryheleine.oysteridentification"
                 ],
                 "components": [
                     {
-                        "/": "/registration/activate.html",
-                        "?": { "email": "*", "vc": "*" },
-                        "comment": "Matches any URL with a path that starts with /registration/activate.html and that has query items email and vc."
-                    },
-                    {
-                        "/": "/registration/oneaccount/verify.html",
-                        "?": { "email": "*", "vc": "*" },
-                        "comment": "Matches any URL with a path that starts with /registration/oneaccount/verify.html and that has query items email and vc."
+                        "/": "/offer.html",
+                        "?": { "code": "*" },
+                        "comment": "Matches any URL with a path /offer.html and that has query item code."
                     },
                     {
                         "/": "*",
