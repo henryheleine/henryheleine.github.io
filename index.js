@@ -56,7 +56,8 @@ app.post("/data", (req, res) => {
 })
 
 app.post("/stream", (req, res) => {
-    processStream(res)
+    const base64ImageData = req.body.imageData
+    processStream(base64ImageData, res)
 })
 
 async function processImage(base64ImageData, country) {
@@ -74,8 +75,8 @@ async function processImage(base64ImageData, country) {
                     type: "image_url",
                     image_url: {
                         url: input
-                    },
-                }],
+                    }
+                }]
             }],
             max_tokens: 256
         })
@@ -86,12 +87,20 @@ async function processImage(base64ImageData, country) {
     }
 }
 
-async function processStream(res) {
+async function processStream(base64ImageData, res) {
+    const input = "data:image/jpeg;base64," + base64ImageData
     const stream = await openai.responses.create({
         model: "gpt-4o-mini",
         input: [{
             role: "user",
-            content: prompt
+            content: [{
+                    type: "text", text: prompt
+                }, {
+                    type: "image_url",
+                    image_url: {
+                        url: input
+                }
+            }]
         }],
         stream: true
     })
