@@ -55,6 +55,10 @@ app.post("/data", (req, res) => {
     })
 })
 
+app.post("/stream", (req, res) => {
+    processStream(res)
+})
+
 async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
     const fullPrompt = (country == "unknown" ? "" : ("Given my location is " + country + ". ")) + prompt
@@ -79,6 +83,27 @@ async function processImage(base64ImageData, country) {
     } catch (error) {
         console.error("Error processing image:", error)
         throw error
+    }
+}
+
+async function processStream(res) {
+    const stream = await openai.responses.create({
+        model: "gpt-4o-mini",
+        input: [{
+            role: "user",
+            content: prompt
+        }],
+        stream: true
+    })
+    res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
+    for await (const event of stream) {
+        if (event.type === "response.output_text.delta") {
+            res.write(event.delta)
+        }
+        if (event.type === "response.output_text.done") { // response.content_part.done, esponse.output_item.done, response.completed
+            console.log("finished streaming request")
+            res.end()
+        }
     }
 }
 
