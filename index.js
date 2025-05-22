@@ -93,13 +93,13 @@ async function processStream(base64ImageData, res) {
         model: "gpt-4o-mini",
         input: [{
             role: "user",
+            content: prompt
+        },
+        {
+            role: "user",
             content: [{
-                    type: "text", text: prompt
-                }, {
-                    type: "image_url",
-                    image_url: {
-                        url: input
-                }
+                type: "input_image",
+                image_url: input
             }]
         }],
         stream: true
