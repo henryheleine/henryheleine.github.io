@@ -3,7 +3,6 @@ import express from "express"
 import bodyParser from "body-parser"
 import fs from "fs"
 import helmet from "helmet"
-import http from "http"
 import rateLimit from "express-rate-limit"
 
 const app = express()
