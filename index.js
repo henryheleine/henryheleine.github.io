@@ -15,9 +15,14 @@ const openai = new OpenAI({
   apiKey: openAIAPIKey
 });
 
-app.use(express.static("public"))
+app.use(express.static("public", { maxAge: "1d" }))
 app.use(bodyParser.json({limit: '50mb', extended: true})) // set request size limit
-app.use(helmet()) // set sensible default headers
+app.use(helmet({
+    contentSecurityPolicy: false,
+    referrerPolicy: {
+        policy: "strict-origin-when-cross-origin"
+    }
+}))
 app.use(rateLimit({ windowMs: 2 * 60 * 1000, max: 10 })) // rate limit requests
 
 app.get("/", function(req,res) {
@@ -25,7 +30,11 @@ app.get("/", function(req,res) {
 })
 
 app.get("/health", function(req,res) {
-    res.status(200).json({ status: "ok" })
+    res.status(200).json({
+        status: "ok",
+        uptime: process.uptime(),
+        memoryUsage: process.memoryUsage()
+    })
 })
 
 app.get("/privacy", function(req,res) {
@@ -48,11 +57,11 @@ app.get("/.well-known/apple-app-site-association", function(req, res) {
 
 app.post("/data", (req, res) => {
     if (!req.body.imageData || !req.body.country) {
-        return res.status(400).json({ error: "Invalid input data" })
+        return res.status(400).json({ error: "Invalid input data. Ensure 'imageData' and 'country' parameters are defined." })
     }
 
     if (!isValidBase64(req.body.imageData) || !isValidBase64(req.body.country)) {
-        return res.status(400).json({ error: "Invalid input data"})
+        return res.status(400).json({ error: "Invalid input data. Ensure 'imageData' and 'country' parameters are valid base 64." })
     }
 
     const base64ImageData = req.body.imageData
@@ -140,7 +149,7 @@ async function processStream(base64ImageData, res) {
         }
     } catch (error) {
         console.error("Error streaming image:", error)
-        throw error
+        res.status(500).send("Streaming failed")
     }
 }
 
@@ -157,7 +166,7 @@ async function appData(res) {
 function getEnv(varName) {
     const value = process.env[varName]
     if (!value) {
-        throw new Error("Environment variable ${varName} is required but not set.")
+        throw new Error("Required environment variable is not set.")
     }
     return value
 }
