@@ -2,17 +2,22 @@ import OpenAI from "openai"
 import express from "express"
 import bodyParser from "body-parser"
 import fs from "fs"
+import helmet from "helmet"
 import http from "http"
+import sanitizeHtml from "sanitize-html"
+import rateLimit from "express-rate-limit"
 
 const app = express()
 const port = process.env.PORT || 5050
 const openai = new OpenAI({
-  apiKey: process.env['OPENAI_API_KEY']
+  apiKey: process.env['OPENAI_API_KEY'] || ""
 });
 const prompt = process.env['PROMPT']
 
 app.use(express.static("public"))
-app.use(bodyParser.json({limit: '50mb', extended: true}))
+app.use(bodyParser.json({limit: '50mb', extended: true})) // set request size limit
+app.use(helmet()) // set sensible default headers
+app.use(rateLimit({ windowMs: 2 * 60 * 1000, max: 100 })) // rate limit requests
 
 app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
@@ -39,20 +44,25 @@ app.get("/ua", function(req,res) {
 })
 
 app.get("/.well-known/apple-app-site-association", function(req, res) {
-    fs.readFile("apple-app-site-association.json", function(error, data) {
-        res.writeHead(200, {"Content-Type":"text/html"})
-        res.end(data)
-    })
+    appData(res)
 })
 
 app.post("/data", (req, res) => {
-    const base64ImageData = req.body.imageData
-    const country = req.body.country
-    processImage(base64ImageData, country).then(response => {
-        console.log(response)
-        res.writeHead(200, {"Content-Type":"application/json"})
-        res.end("{ \"content\": \"" + response + "\" }")
-    })
+    if (!req.body.imageData || !req.body.country) {
+        return res.status(400).json({ error: "Invalid input data" })
+    }
+
+    const base64ImageData = sanitizeHtml(req.body.imageData)
+    const country = sanitizeHtml(req.body.country)
+    processImage(base64ImageData, country)
+        .then(response => {
+            console.log(response)
+            res.writeHead(200, {"Content-Type":"application/json"})
+            res.end("{ \"content\": \"" + response + "\" }")
+        })
+        .catch(error => {
+            res.status(500).json({ error: "Failed to process image" })
+        })
 })
 
 app.post("/stream", (req, res) => {
@@ -60,9 +70,17 @@ app.post("/stream", (req, res) => {
     processStream(base64ImageData, res)
 })
 
+// 404 handler
+app.use((req, res, next) => {
+  res.status(404).json({ error: "Endpoint not found" })
+});
+
 async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
+    
+    // add optional country if available for better prompting
     const fullPrompt = (country == "unknown" ? "" : ("Given my location is " + country + ". ")) + prompt
+
     console.log("fullPrompt = " + fullPrompt)
     try {
         const completion = await openai.chat.completions.create({
@@ -89,30 +107,47 @@ async function processImage(base64ImageData, country) {
 
 async function processStream(base64ImageData, res) {
     const input = "data:image/jpeg;base64," + base64ImageData
-    const stream = await openai.responses.create({
-        model: "gpt-4o-mini",
-        input: [{
-            role: "user",
-            content: prompt
-        },
-        {
-            role: "user",
-            content: [{
-                type: "input_image",
-                image_url: input
-            }]
-        }],
-        stream: true
-    })
-    res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
-    for await (const event of stream) {
-        if (event.type === "response.output_text.delta") {
-            res.write(event.delta)
+    try {
+        const stream = await openai.responses.create({
+            model: "gpt-4o-mini",
+            input: [{
+                role: "user",
+                content: prompt
+            },
+            {
+                role: "user",
+                content: [{
+                    type: "input_image",
+                    image_url: input
+                }]
+            }],
+            stream: true
+        })
+        res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
+        for await (const event of stream) {
+            if (event.type === "response.output_text.delta") {
+                res.write(event.delta)
+            }
+            if (event.type === "response.output_text.done") { // response.content_part.done, esponse.output_item.done, response.completed
+                console.log("finished streaming request")
+                res.end()
+            }
         }
-        if (event.type === "response.output_text.done") { // response.content_part.done, esponse.output_item.done, response.completed
-            console.log("finished streaming request")
-            res.end()
-        }
+    } catch (error) {
+        console.error("Error streaming image:", error)
+        throw error
+    }
+}
+
+async function appData(res) {
+    try {
+        const data = await fs.promises.readFile("apple-app-site-association.json", "utf8")
+        res.writeHead(200, {"Content-Type":"text/html"})
+        res.end(data)
+    } catch (error) {
+        console.error("Error returning /.well-known/apple-app-site-association file:", error)
+        res.writeHead(500, {"Content-Type":"text/plain"})
+        res.end("no file found")
     }
 }
 
