@@ -1,5 +1,6 @@
 import OpenAI from "openai"
 import express from "express"
+import bodyParser from "body-parser"
 import fs from "fs"
 import helmet from "helmet"
 import http from "http"
