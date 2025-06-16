@@ -7,7 +7,7 @@ import http from "http"
 import rateLimit from "express-rate-limit"
 
 const app = express()
-const makeTokens = 256
+const maxTokens = 256
 const model = getEnv("MODEL")
 const openAIAPIKey = getEnv("OPENAI_API_KEY")
 const prompt = getEnv("PROMPT")
@@ -111,7 +111,7 @@ async function processImage(base64ImageData, country) {
                     }
                 }]
             }],
-            max_tokens: makeTokens
+            max_tokens: maxTokens
         })
         return completion.choices[0].message.content
     } catch (error) {
