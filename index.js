@@ -12,7 +12,7 @@ const port = process.env.PORT || 5050
 const openai = new OpenAI({
   apiKey: process.env['OPENAI_API_KEY'] || ""
 });
-const prompt = process.env['PROMPT']
+const prompt = process.env['PROMPT'] || ""
 
 app.use(express.static("public"))
 app.use(bodyParser.json({limit: '50mb', extended: true})) // set request size limit
