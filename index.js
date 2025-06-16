@@ -1,23 +1,23 @@
 import OpenAI from "openai"
 import express from "express"
-import bodyParser from "body-parser"
 import fs from "fs"
 import helmet from "helmet"
 import http from "http"
-import sanitizeHtml from "sanitize-html"
 import rateLimit from "express-rate-limit"
 
 const app = express()
+const model = getEnv("MODEL")
+const openAIAPIKey = getEnv("OPENAI_API_KEY")
+const prompt = getEnv("PROMPT")
 const port = process.env.PORT || 5050
 const openai = new OpenAI({
-  apiKey: process.env['OPENAI_API_KEY'] || ""
+  apiKey: openAIAPIKey
 });
-const prompt = process.env['PROMPT'] || ""
 
 app.use(express.static("public"))
 app.use(bodyParser.json({limit: '50mb', extended: true})) // set request size limit
 app.use(helmet()) // set sensible default headers
-app.use(rateLimit({ windowMs: 2 * 60 * 1000, max: 100 })) // rate limit requests
+app.use(rateLimit({ windowMs: 2 * 60 * 1000, max: 10 })) // rate limit requests
 
 app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
@@ -50,8 +50,12 @@ app.post("/data", (req, res) => {
         return res.status(400).json({ error: "Invalid input data" })
     }
 
-    const base64ImageData = sanitizeHtml(req.body.imageData)
-    const country = sanitizeHtml(req.body.country)
+    if (!isValidBase64(req.body.imageData) || !isValidBase64(req.body.country)) {
+        return res.status(400).json({ error: "Invalid input data"})
+    }
+
+    const base64ImageData = req.body.imageData
+    const country = req.body.country
     processImage(base64ImageData, country)
         .then(response => {
             console.log(response)
@@ -74,14 +78,17 @@ app.use((req, res, next) => {
 
 async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
-    
+    var improvedInput
     // add optional country if available for improved input
-    const improvedInput = (country == "unknown" ? "" : ("Given my location is " + country + ". ")) + prompt
-
+    if (country == "unknown") {
+        improvedInput = prompt
+    } else {
+        improvedInput = "".concat("Given my location is ").concat(country).concat(". ").concat(prompt)
+    }
     console.log("improvedInput = " + improvedInput)
     try {
         const completion = await openai.chat.completions.create({
-            model: "gpt-4o-mini",
+            model: model,
             messages: [{
                 role: "user",
                 content: [{
@@ -106,7 +113,7 @@ async function processStream(base64ImageData, res) {
     const input = "data:image/jpeg;base64," + base64ImageData
     try {
         const stream = await openai.responses.create({
-            model: "gpt-4o-mini",
+            model: model,
             input: [{
                 role: "user",
                 content: prompt
@@ -139,11 +146,30 @@ async function processStream(base64ImageData, res) {
 async function appData(res) {
     try {
         const data = await fs.promises.readFile("apple-app-site-association.json", "utf8")
-        res.status(200).type("html").send(data)
+        res.status(200).json(data)
     } catch (error) {
         console.error("Error returning /.well-known/apple-app-site-association file:", error)
-        res.status(500).type("text").send("no file found")
+        res.status(500).json({ status: "no file found"})
     }
+}
+
+function getEnv(varName) {
+    const value = process.env[varName]
+    if (!value) {
+        throw new Error("Environment variable ${varName} is required but not set.")
+    }
+    return value
+}
+
+function isValidBase64(str) {
+    if (typeof str !== 'string') {
+        return false
+    }
+    if (str.length % 4 !== 0) {
+        return false
+    }
+    const base64Regex = /^[A-Za-z0-9+/]+={0,2}$/
+    return base64Regex.test(str)
 }
 
 app.listen(port)
