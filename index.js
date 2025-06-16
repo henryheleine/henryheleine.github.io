@@ -24,8 +24,7 @@ app.get("/", function(req,res) {
 })
 
 app.get("/health", function(req,res) {
-    res.writeHead(200, {"Content-Type":"text/html"})
-    res.end()
+    res.status(200).json({ status: "ok" })
 })
 
 app.get("/privacy", function(req,res) {
@@ -39,8 +38,7 @@ app.get("/support", function(req,res) {
 app.get("/ua", function(req,res) {
     const userAgent = req.headers['user-agent']
     console.log("user agent = " + userAgent)
-    res.writeHead(200, {"Content-Type":"text/html"})
-    res.end("{ \"userAgent\": \"" + userAgent + "\"}")
+    res.status(200).json({ "userAgent": userAgent })
 })
 
 app.get("/.well-known/apple-app-site-association", function(req, res) {
@@ -57,8 +55,7 @@ app.post("/data", (req, res) => {
     processImage(base64ImageData, country)
         .then(response => {
             console.log(response)
-            res.writeHead(200, {"Content-Type":"application/json"})
-            res.end("{ \"content\": \"" + response + "\" }")
+            res.status(200).json({ "content": response })
         })
         .catch(error => {
             res.status(500).json({ error: "Failed to process image" })
@@ -78,17 +75,17 @@ app.use((req, res, next) => {
 async function processImage(base64ImageData, country) {
     const input = "data:image/jpeg;base64," + base64ImageData
     
-    // add optional country if available for better prompting
-    const fullPrompt = (country == "unknown" ? "" : ("Given my location is " + country + ". ")) + prompt
+    // add optional country if available for improved input
+    const improvedInput = (country == "unknown" ? "" : ("Given my location is " + country + ". ")) + prompt
 
-    console.log("fullPrompt = " + fullPrompt)
+    console.log("improvedInput = " + improvedInput)
     try {
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{
                 role: "user",
                 content: [{
-                    type: "text", text: prompt
+                    type: "text", text: improvedInput
                 }, {
                     type: "image_url",
                     image_url: {
@@ -123,7 +120,7 @@ async function processStream(base64ImageData, res) {
             }],
             stream: true
         })
-        res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
+        res.status(200).type("text").set("Transfer-Encoding", "chunked")
         for await (const event of stream) {
             if (event.type === "response.output_text.delta") {
                 res.write(event.delta)
@@ -142,12 +139,10 @@ async function processStream(base64ImageData, res) {
 async function appData(res) {
     try {
         const data = await fs.promises.readFile("apple-app-site-association.json", "utf8")
-        res.writeHead(200, {"Content-Type":"text/html"})
-        res.end(data)
+        res.status(200).type("html").send(data)
     } catch (error) {
         console.error("Error returning /.well-known/apple-app-site-association file:", error)
-        res.writeHead(500, {"Content-Type":"text/plain"})
-        res.end("no file found")
+        res.status(500).type("text").send("no file found")
     }
 }
 
