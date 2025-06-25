@@ -32,8 +32,8 @@ app.get("/", function(req,res) {
 app.get("/health", function(req,res) {
     res.status(200).json({
         status: "ok",
-        uptime: process.uptime(),
-        memoryUsage: process.memoryUsage()
+        uptime: process.uptime()
+        // memoryUsage: process.memoryUsage()
     })
 })
 
