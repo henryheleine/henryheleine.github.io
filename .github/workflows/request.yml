@@ -1,0 +1,10 @@
+name: Request URL On Schedule
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+jobs:
+  request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request URL
+        run: curl https://render-4ezx.onrender.com
