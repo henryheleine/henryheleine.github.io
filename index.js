@@ -23,10 +23,16 @@ app.use(helmet({
         policy: "strict-origin-when-cross-origin"
     }
 }))
-app.use(rateLimit({ windowMs: 2 * 60 * 1000, max: 10 })) // rate limit requests
+// app.use(rateLimit({ windowMs: 2 * 60 * 1000, max: 10 })) // rate limit requests
 
 app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
+})
+
+app.get("/background", function(req,res) {
+    const userAgent = req.headers['user-agent']
+    console.log("BACKGROUND REQUEST MADE: user agent = " + userAgent)
+    res.type('html').send("<html><body><h1>Background Content</h1></body></html>")
 })
 
 app.get("/health", function(req,res) {
@@ -159,7 +165,7 @@ async function appData(res) {
         res.status(200).json(data)
     } catch (error) {
         console.error("Error returning /.well-known/apple-app-site-association file:", error)
-        res.status(500).json({ status: "no file found"})
+        res.status(500).json({ status: "no file found" })
     }
 }
 
