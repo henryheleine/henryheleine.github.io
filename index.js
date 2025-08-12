@@ -32,13 +32,15 @@ app.get("/", function(req,res) {
 app.get("/background", function(req,res) {
     const userAgent = req.headers['user-agent']
     console.log("BACKGROUND REQUEST MADE: user agent = " + userAgent)
-    res.type('html').send("<html><body><h1>Background Content</h1></body></html>")
+    res.status(200).json({
+        status: "success"
+    })
 })
 
 app.get("/health", function(req,res) {
     res.status(200).json({
-        status: "ok",
-        uptime: process.uptime()
+        status: "success"
+        // uptime: process.uptime()
         // memoryUsage: process.memoryUsage()
     })
 })
