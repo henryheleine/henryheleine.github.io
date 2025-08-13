@@ -29,14 +29,17 @@ app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
 })
 
-app.get("/upload", function(req,res) {
+app.post("/upload", function(req,res) {
     const userAgent = req.headers['user-agent']
     console.log("UPLOAD REQUEST MADE: user agent = " + userAgent)
-    setTimeout(() => {
-        res.status(200).json({
-            status: "success"
-        })
-    }, 25000)
+
+    res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
+    for (var i == 0; i < 100; i++) {
+        console.log("+1%")
+        res.write(i)
+    }
+    console.log("end")
+    res.end({ status: "success" })
 })
 
 app.get("/health", function(req,res) {
