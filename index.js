@@ -36,7 +36,9 @@ app.post("/upload", function(req,res) {
 async function processUpload(res) {
     res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
     for (var i = 0; i < 100; i++) {
-        res.write(i)
+        setTimeout(() => {
+            res.write(i)
+        }, 200)
     }
     res.end()
 }
