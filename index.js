@@ -30,22 +30,16 @@ app.get("/", function(req,res) {
 })
 
 app.post("/upload", function(req,res) {
-    processUpload(res)
-})
-
-async function processUpload(res) {
     res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
-    for (var i = 1; i <= 100; i++) {
-        res.write("{ \"progress\": \"" + i + "\" }")
+    for (var i = 0; i <= 1.0; i += 0.01) {
+        res.write("{ \"progress\": \"" + i.toFixed(2) + "\" }")
     }
-    res.end("{ \"status\": \"success\" }")
-}
+    res.end("{ \"progress\": \"1.0\" }")
+})
 
 app.get("/health", function(req,res) {
     res.status(200).json({
         status: "success"
-        // uptime: process.uptime()
-        // memoryUsage: process.memoryUsage()
     })
 })
 
