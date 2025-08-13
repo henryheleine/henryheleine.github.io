@@ -30,17 +30,14 @@ app.get("/", function(req,res) {
 })
 
 app.post("/upload", function(req,res) {
-    const userAgent = req.headers['user-agent']
-    console.log("UPLOAD REQUEST MADE: user agent = " + userAgent)
+    processUpload(res)
+}
 
-    res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
-    for (var i = 0; i < 100; i++) {
-        console.log("+1%")
-        res.write(i)
-    }
-    console.log("end")
-    res.end({ status: "success" })
-})
+async function processUpload(res) {
+    res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
+    res.write("one update")
+    res.end()
+}
 
 app.get("/health", function(req,res) {
     res.status(200).json({
