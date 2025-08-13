@@ -34,7 +34,7 @@ app.post("/upload", function(req,res) {
     console.log("UPLOAD REQUEST MADE: user agent = " + userAgent)
 
     res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
-    for (var i == 0; i < 100; i++) {
+    for (var i = 0; i < 100; i++) {
         console.log("+1%")
         res.write(i)
     }
