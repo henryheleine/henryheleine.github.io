@@ -36,9 +36,9 @@ app.post("/upload", function(req,res) {
 async function processUpload(res) {
     res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
     for (var i = 0; i < 100; i++) {
-        res.write("one update")
+        res.write("{ \"update\": \"one\" }")
     }
-    res.end()
+    res.end("{ \"update\": \"done\" }")
 }
 
 app.get("/health", function(req,res) {
