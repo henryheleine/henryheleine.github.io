@@ -32,9 +32,9 @@ app.get("/", function(req,res) {
 app.post("/upload", function(req,res) {
     res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
     for (var i = 0; i <= 1.0; i += 0.01) {
-        res.write("{ \"progress\": \"" + i.toFixed(2) + "\" }")
+        res.write("{ \"progress\": " + i.toFixed(2) + " }")
     }
-    res.end("{ \"progress\": \"1.0\" }")
+    res.end("{ \"progress\": 1.0 }")
 })
 
 app.get("/health", function(req,res) {
