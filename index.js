@@ -31,7 +31,7 @@ app.get("/", function(req,res) {
 
 app.post("/upload", function(req,res) {
     processUpload(res)
-}
+})
 
 async function processUpload(res) {
     res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
