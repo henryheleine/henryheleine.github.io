@@ -7,13 +7,13 @@ import rateLimit from "express-rate-limit"
 
 const app = express()
 const maxTokens = 256
-const model = getEnv("MODEL")
-const openAIAPIKey = getEnv("OPENAI_API_KEY")
-const prompt = getEnv("PROMPT")
+const model = "" // getEnv("MODEL")
+const openAIAPIKey = "" // getEnv("OPENAI_API_KEY")
+const prompt = "" // getEnv("PROMPT")
 const port = process.env.PORT || 5050
 const openai = new OpenAI({
   apiKey: openAIAPIKey
-});
+})
 
 app.use(express.static("public", { maxAge: "1d" }))
 app.use(bodyParser.json({limit: '50mb', extended: true})) // set request size limit
@@ -35,10 +35,10 @@ app.post("/upload", function(req,res) {
 
 async function processUpload(res) {
     res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
-    for (var i = 0; i < 100; i++) {
-        res.write("{ \"update\": \"one\" }")
+    for (var i = 1; i <= 100; i++) {
+        res.write("{ \"progress\": \"" + i + "\" }")
     }
-    res.end("{ \"update\": \"done\" }")
+    res.end("{ \"status\": \"success\" }")
 }
 
 app.get("/health", function(req,res) {
