@@ -29,12 +29,14 @@ app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
 })
 
-app.get("/background", function(req,res) {
+app.get("/upload", function(req,res) {
     const userAgent = req.headers['user-agent']
-    console.log("BACKGROUND REQUEST MADE: user agent = " + userAgent)
-    res.status(200).json({
-        status: "success"
-    })
+    console.log("UPLOAD REQUEST MADE: user agent = " + userAgent)
+    setTimeout(() => {
+        res.status(200).json({
+            status: "success"
+        })
+    }, 25000)
 })
 
 app.get("/health", function(req,res) {
