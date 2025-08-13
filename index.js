@@ -36,19 +36,9 @@ app.post("/upload", function(req,res) {
 async function processUpload(res) {
     res.writeHead(200, { "Content-Type": "text/plain", "Transfer-Encoding": "chunked"})
     for (var i = 0; i < 100; i++) {
-        for (var i = 0; i < 500; i++) {
-            res.write(i)
-        }
+        res.write("one update")
     }
     res.end()
-}
-
-function sleep(time, callback) {
-    var stop = new Date().getTime();
-    while(new Date().getTime() < stop + time) {
-        // do nothing and wait
-    }
-    callback()
 }
 
 app.get("/health", function(req,res) {
