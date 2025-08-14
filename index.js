@@ -43,7 +43,7 @@ app.post("/fail400", function(req,res) {
 })
 
 app.post("/fail500", function(req,res) {
-    res.status(500).json({ error: "Failed with 500 error" })
+    res.status(500).html("<html><body><p>failed</p></body></html>")
 })
 
 app.get("/health", function(req,res) {
