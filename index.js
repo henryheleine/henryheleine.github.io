@@ -38,12 +38,10 @@ app.post("/upload", function(req,res) {
     res.end("{ \"progress\": 1.0 }")
 })
 
-app.post("/fail400", function(req,res) {
-    res.status(400).json({ error: "Failed with 400 error" })
-})
-
-app.post("/fail500", function(req,res) {
-    res.status(500).html("<html><body><p>failed</p></body></html>")
+app.post("/fail", function(req,res) {
+    setTimeout(() => {
+        res.send("Return response after 65 seconds")
+    }, 65000);
 })
 
 app.get("/health", function(req,res) {
