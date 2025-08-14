@@ -7,9 +7,9 @@ import rateLimit from "express-rate-limit"
 
 const app = express()
 const maxTokens = 256
-const model = "" // getEnv("MODEL")
-const openAIAPIKey = "" // getEnv("OPENAI_API_KEY")
-const prompt = "" // getEnv("PROMPT")
+const model = getEnv("MODEL")
+const openAIAPIKey = getEnv("OPENAI_API_KEY")
+const prompt = getEnv("PROMPT")
 const port = process.env.PORT || 5050
 const openai = new OpenAI({
   apiKey: openAIAPIKey
@@ -36,6 +36,14 @@ app.post("/upload", function(req,res) {
         res.write("{ \"progress\": " + i.toFixed(2) + " }")
     }
     res.end("{ \"progress\": 1.0 }")
+})
+
+app.post("/fail400", function(req,res) {
+    res.status(400).json({ error: "Failed with 400 error" })
+})
+
+app.post("/fail500", function(req,res) {
+    res.status(500).json({ error: "Failed with 500 error" })
 })
 
 app.get("/health", function(req,res) {
