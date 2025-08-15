@@ -30,7 +30,12 @@ app.get("/", function(req,res) {
 })
 
 app.post("/upload", function(req,res) {
-    console.log("UPLOAD API HIT")
+    res.writeHead(200, { "Content-Type": "application/json" })
+    res.end("{ \"progress\": 1.0 }")
+})
+
+app.post("/uploadStream", function(req,res) {
+    console.log("UPLOAD STREAM API HIT")
     res.writeHead(200, { "Content-Type": "application/json", "Transfer-Encoding": "chunked"})
     for (var i = 0; i <= 1.0; i += 0.01) {
         res.write("{ \"progress\": " + i.toFixed(2) + " }")
