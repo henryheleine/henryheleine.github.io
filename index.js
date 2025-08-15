@@ -29,8 +29,8 @@ app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
 })
 
-app.post("/upload", function(req,res) {
-    console.log("UPLOAD API HIT")
+app.post("/upload/*", function(req,res) {
+    console.log("UPLOAD API HIT " + req.originalUrl)
     res.writeHead(200, { "Content-Type": "application/json" })
     res.end("{ \"progress\": 1.0 }")
 })
