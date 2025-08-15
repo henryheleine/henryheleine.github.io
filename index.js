@@ -30,6 +30,7 @@ app.get("/", function(req,res) {
 })
 
 app.post("/upload", function(req,res) {
+    console.log("UPLOAD API HIT")
     res.writeHead(200, { "Content-Type": "application/json" })
     res.end("{ \"progress\": 1.0 }")
 })
