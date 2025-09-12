@@ -29,6 +29,10 @@ app.get("/", function(req,res) {
     res.type('html').send("<html><body><h1>Hey there</h1></body></html>")
 })
 
+app.get("/abinbev", function(req,res) {
+    res.send("<html><head></head><body style='margin:0;'><iframe width='100%' height='100%' src='https://docs.google.com/spreadsheets/d/1aeIDOTC7AxxVYgi-cdnr64N3VKISwwjOGUN5H90C2eI/edit'></body></html>")
+})
+
 app.post("/upload/*", function(req,res) {
     console.log("UPLOAD API HIT " + req.originalUrl)
     res.writeHead(200, { "Content-Type": "application/json" })
