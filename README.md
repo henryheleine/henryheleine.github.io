@@ -2,21 +2,20 @@
 
 ## Table of Contents
 - Incident Management SOP
-  - [Table of Contents 📄](#table-of-contents)
+  - [Table of Contents 📃](#table-of-contents)
   - [Brief 💼](#brief)
-  - [Context 💼](#context)
-  - [How do we restore service ASAP](#how-do-we-restore-service-ASAP)
-  - [Communicating During an Incident](#communicating-during-an-incident)
-  - [Example Of Efficient Troubleshooting](#example-of-efficient-troubleshooting)
-  - [Example Of Inefficient Troubleshooting](#example-of-inefficient-troubleshooting)
-  - [Exit Criteria for Bridge](#exit-criteria-for-bridge)
-  - [Aftercare: RCA and Postmortem](#aftercare-rca-and-postmortem)
-  - [Incident Summary](#incident-summary)
-  - [Impact](#impact)
-  - [Timeline](#timeline)
-  - [Detection And Response](#detection-and-response)
-  - [Root Cause Analysis and 5 Whys](#root-cause-analysis-and-5-whys)
-  - [Best Practices](#best-practices)
+  - [Context 🖼️](#context)
+  - [How do we restore service ASAP ⏩](#how-do-we-restore-service-ASAP)
+  - [Communicating During an Incident 🗣️](#communicating-during-an-incident)
+  - [Example Of Efficient Troubleshooting 🟢](#example-of-efficient-troubleshooting)
+  - [Example Of Inefficient Troubleshooting 🔴](#example-of-inefficient-troubleshooting)
+  - [Exit Criteria for Bridge ⏹️](#exit-criteria-for-bridge)
+  - [Aftercare: RCA and Postmortem 📬](#aftercare-rca-and-postmortem)
+  - [Incident Summary 📃](#incident-summary)
+  - [Impact 📊](#impact)
+  - [Timeline ⏱️](#timeline)
+  - [Root Cause Analysis and 5 Whys 🦷](#root-cause-analysis-and-5-whys)
+  - [Best Practices 🏆](#best-practices)
 
 ---
 
@@ -50,7 +49,7 @@ Halt other planned deployments during P1/P2.
 
 ---
 
-## Communicating During An Incident
+## Communicating During An Incident 🗣️
 
 Provide consistent stakeholder communication; P1 = every 30 mins and P2 = every 60 mins, with the following template:
 
@@ -93,7 +92,7 @@ Next steps: [RCA] | [JIRA] with ETA and assigned person responsible
 ---
 
 
-## Exit Criteria For Bridge
+## Exit Criteria For Bridge ⏹️
 
 An incident should only be closed when there is confidence that the underlying issue has been fully resolved and the system is stable:
 * The root cause has been identified, documented, and addressed.
@@ -104,7 +103,7 @@ An incident should only be closed when there is confidence that the underlying i
 
 ---
 
-## Aftercare: RCA and Postmortem
+## Aftercare: RCA and Postmortem 📬
 
 Now that the incident has been resolved we'll now do a few things so that we can prevent similar incidents from happening in the future.
 
@@ -116,7 +115,7 @@ Incident commander + Guild Lead attend Problem Management meeting to talk to the
 
 ---
 
-## Incident Summary
+## Incident Summary 📃
 Brief description of what happened and current status.
 
 | Field                          | Value                                                   |
@@ -135,7 +134,7 @@ Brief description of what happened and current status.
 
 ---
 
-## Impact
+## Impact 📊
 | Dimension          | Details                             |
 | ------------------ | ----------------------------------- |
 | Users / Customers  | Who was affected and how            |
@@ -146,7 +145,7 @@ Brief description of what happened and current status.
 
 ---
 
-## Timeline
+## Timeline ⏱️
 | Timestamp (TZ) | Event                                           | Notes/Evidence                                  |
 | -------------- | ----------------------------------------------- | ----------------------------------------------- |
 | 12:31          | Detection                                       | Alert xyz fired (link)                          |
@@ -157,13 +156,8 @@ Brief description of what happened and current status.
 
 ---
 
-## Detection And Response
-* How was the incident detected. What is detected by our alerting through datadog or by a user. 
-* How did we respond to the issue. What went well. What slowed the response.
 
----
-
-## Root Cause Analysis and 5 Whys
+## Root Cause Analysis and 5 Whys 🦷
 * Problem statement: Clear, user-facing symptom.
 * Root cause (systemic, actionable): Process/design/config gap, not a person.
 * Run through the 5 Whys exercise; start with the incident’s primary symptom or impact then ask "Why did that happen?" and write the answer. Take that answer and repeat why until you reach a preventable action.
@@ -179,7 +173,7 @@ Action: Add schema validation in CI, block deploy on invalid defaults, add canar
 
 ---
 
-## Best practices
+## Best practices 🏆
 * Be blameless and specific: target process, tooling, checks, contracts—not individuals.
 * Make each “Why” evidence-based (logs, monitors, PRs, runbooks).
 * Stop when the next “Why” points to a broad organizational/systemic limitation or when further whys aren’t actionable.
